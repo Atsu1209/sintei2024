@@ -1,0 +1,4489 @@
+RAGE Plugin Hook v1.122.1379.17094 PUBLIC
+
+Game: Grand Theft Auto V
+Game build: 3586
+Branch: Steam
+
+Plugins loaded at the time of the crash:
+
+No plugin was ticking at the time of this crash.
+Base address: 00007ff6e6f90000
+Exception address: 00007ffad43466ca
+Exception offset: 3ed3b66ca
+Exception code: 0xe0434352 (DOT_NET_EXCEPTION)
+
+Stack trace (unmanaged):
+	0x00007ffad4399f83 - UnhandledExceptionFilter - in Unknown:0 (C:\WINDOWS\System32\KERNELBASE.dll)
+	0x00007ffad441ce37 - TlsGetValue - in Unknown:0 (C:\WINDOWS\System32\KERNELBASE.dll)
+	0x00007ffad6d43213 - _C_specific_handler - in Unknown:0 (C:\WINDOWS\SYSTEM32\ntdll.dll)
+	0x00007ffad6d8796f - _chkstk - in Unknown:0 (C:\WINDOWS\SYSTEM32\ntdll.dll)
+	0x00007ffad6c96397 - RtlWow64GetCurrentCpuArea - in Unknown:0 (C:\WINDOWS\SYSTEM32\ntdll.dll)
+	0x00007ffad6c95226 - RtlRaiseException - in Unknown:0 (C:\WINDOWS\SYSTEM32\ntdll.dll)
+	0x00007ffad43466ca - RaiseException - in Unknown:0 (C:\WINDOWS\System32\KERNELBASE.dll)
+	0x00007ffab75010a8 - IEE - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab7785d49 - TranslateSecurityAttributes - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab7785dfd - TranslateSecurityAttributes - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab7785e0c - TranslateSecurityAttributes - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab78cfd9b - TranslateSecurityAttributes - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab74b4cc7 - NGenCreateNGenWorker - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab74b3967 - NGenCreateNGenWorker - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab74b36e4 - NGenCreateNGenWorker - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffab750ed15 - DllCanUnloadNowInternal - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+	0x00007ffa582e91bb - DllCanUnloadNowInternal - in Unknown:0 (C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll)
+
+Stack trace (managed):
+	  Hook:OnGameCrashManaged(_EXCEPTION_POINTERS* exceptionInfo, Void** stackFrames, Int32 framesCaptured, SByte* exceptionName, Plugin plugin, String pluginStackTrace)
+	  Hook:OnGameCrashManaged(_EXCEPTION_POINTERS* exceptionInfo, Void** stackFrames, Int32 framesCaptured, SByte* exceptionName)
+	  Hook:SHVDN.Console.DoTick()
+	  Hook:?A0xc1aa4bd5.ScriptHookVDotnet_ManagedTick()
+
+
+General purpose registers:
+	RAX: 0x00000008a9b89fb8
+	RCX: 0x00007ffab1af1000
+	RDX: 0x0000000800000000
+	RBX: 0x00000008a9b8a4f8
+	RSP: 0x00000008a9b8a340
+	RBP: 0x0000000000000005
+	RSI: 0x0000000000000001
+	RDI: 0x00000000e0434352
+	R8: 0x0000000800000003
+	R9: 0x00007ffab2623029
+	R10: 0x00007ffa00000000
+	R11: 0x0000000800000001
+	R12: 0x0000000000004000
+	R13: 0x0000000000000000
+	R14: 0x00000008a9b8a4f8
+	R15: 0x00000008a9b8a8f8
+	RIP: 0x00007ffad43466ca
+
+Segment registers:
+	CS: 0x0033
+	DS: 0x002b
+	ES: 0x002b
+	FS: 0x0053
+	GS: 0x002b
+	SS: 0x002b
+	Flags: 0x00000202
+
+Debug registers:
+	Dr0: 0x0000000800000001
+	Dr1: 0x0000000000000000
+	Dr2: 0x00007ffab73debd0
+	Dr3: 0x0000000800000000
+	Dr6: 0x00007ffab1af1000
+	Dr7: 0x00000008a9b89c38
+
+Floating point state:
+	Xmm0: Low: 0x00000008a9b89d80, High: 0x00000008a9b89d80
+	Xmm1: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm2: Low: 0x00000008a9b89d88, High: 0x00000008a9b89d88
+	Xmm3: Low: 0x00007ffab7b1edd0, High: 0x00007ffab7b1edd0
+	Xmm4: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm5: Low: 0x00000008a9b8a028, High: 0x00000008a9b8a028
+	Xmm6: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm7: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm8: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm9: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm10: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm11: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm12: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm13: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm14: Low: 0x0000000000000000, High: 0x0000000000000000
+	Xmm15: Low: 0x0000000000000000, High: 0x0000000000000000
+
+Threads:
+	Id: 29016 (0x7158) (CURRENT); state: Running
+	Id: 17620 (0x44d4)state: Wait (Reason: EventPairLow)
+	Id: 15488 (0x3c80)state: Wait (Reason: UserRequest)
+	Id: 2632 (0x0a48)state: Wait (Reason: UserRequest)
+	Id: 1908 (0x0774)state: Wait (Reason: ExecutionDelay)
+	Id: 5192 (0x1448)state: Wait (Reason: EventPairLow)
+	Id: 24884 (0x6134)state: Wait (Reason: UserRequest)
+	Id: 25012 (0x61b4)state: Wait (Reason: EventPairLow)
+	Id: 17688 (0x4518)state: Wait (Reason: ExecutionDelay)
+	Id: 24824 (0x60f8)state: Wait (Reason: UserRequest)
+	Id: 10164 (0x27b4)state: Wait (Reason: UserRequest)
+	Id: 26800 (0x68b0)state: Wait (Reason: UserRequest)
+	Id: 30472 (0x7708)state: Wait (Reason: ExecutionDelay)
+	Id: 20852 (0x5174)state: Wait (Reason: UserRequest)
+	Id: 23936 (0x5d80)state: Wait (Reason: UserRequest)
+	Id: 26464 (0x6760)state: Wait (Reason: UserRequest)
+	Id: 24664 (0x6058)state: Wait (Reason: UserRequest)
+	Id: 16084 (0x3ed4)state: Wait (Reason: UserRequest)
+	Id: 31168 (0x79c0)state: Wait (Reason: UserRequest)
+	Id: 20908 (0x51ac)state: Wait (Reason: UserRequest)
+	Id: 28188 (0x6e1c)state: Wait (Reason: UserRequest)
+	Id: 11644 (0x2d7c)state: Wait (Reason: UserRequest)
+	Id: 17228 (0x434c)state: Wait (Reason: UserRequest)
+	Id: 9740 (0x260c)state: Wait (Reason: EventPairLow)
+	Id: 3624 (0x0e28)state: Wait (Reason: UserRequest)
+	Id: 26612 (0x67f4)state: Wait (Reason: EventPairLow)
+	Id: 31148 (0x79ac)state: Wait (Reason: EventPairLow)
+	Id: 11828 (0x2e34)state: Wait (Reason: UserRequest)
+	Id: 19624 (0x4ca8)state: Wait (Reason: UserRequest)
+	Id: 29936 (0x74f0)state: Wait (Reason: UserRequest)
+	Id: 2560 (0x0a00)state: Wait (Reason: UserRequest)
+	Id: 31436 (0x7acc)state: Wait (Reason: UserRequest)
+	Id: 17136 (0x42f0)state: Wait (Reason: ExecutionDelay)
+	Id: 13012 (0x32d4)state: Wait (Reason: EventPairLow)
+	Id: 22016 (0x5600)state: Wait (Reason: Unknown)
+	Id: 25156 (0x6244)state: Wait (Reason: Unknown)
+	Id: 29960 (0x7508)state: Wait (Reason: UserRequest)
+	Id: 3964 (0x0f7c)state: Wait (Reason: UserRequest)
+	Id: 10968 (0x2ad8)state: Wait (Reason: UserRequest)
+	Id: 24952 (0x6178)state: Wait (Reason: UserRequest)
+	Id: 2188 (0x088c)state: Wait (Reason: UserRequest)
+	Id: 21604 (0x5464)state: Wait (Reason: UserRequest)
+	Id: 18248 (0x4748)state: Wait (Reason: UserRequest)
+	Id: 17636 (0x44e4)state: Wait (Reason: UserRequest)
+	Id: 11700 (0x2db4)state: Wait (Reason: UserRequest)
+	Id: 30656 (0x77c0)state: Wait (Reason: UserRequest)
+	Id: 14768 (0x39b0)state: Wait (Reason: UserRequest)
+	Id: 30508 (0x772c)state: Wait (Reason: UserRequest)
+	Id: 24900 (0x6144)state: Wait (Reason: UserRequest)
+	Id: 27584 (0x6bc0)state: Wait (Reason: UserRequest)
+	Id: 27388 (0x6afc)state: Wait (Reason: UserRequest)
+	Id: 23716 (0x5ca4)state: Wait (Reason: UserRequest)
+	Id: 26924 (0x692c)state: Wait (Reason: UserRequest)
+	Id: 26480 (0x6770)state: Wait (Reason: UserRequest)
+	Id: 29664 (0x73e0)state: Wait (Reason: UserRequest)
+	Id: 21672 (0x54a8)state: Wait (Reason: UserRequest)
+	Id: 11964 (0x2ebc)state: Wait (Reason: UserRequest)
+	Id: 6852 (0x1ac4)state: Wait (Reason: UserRequest)
+	Id: 26328 (0x66d8)state: Wait (Reason: UserRequest)
+	Id: 25660 (0x643c)state: Wait (Reason: UserRequest)
+	Id: 1848 (0x0738)state: Wait (Reason: UserRequest)
+	Id: 6808 (0x1a98)state: Wait (Reason: UserRequest)
+	Id: 9736 (0x2608)state: Wait (Reason: UserRequest)
+	Id: 4452 (0x1164)state: Wait (Reason: UserRequest)
+	Id: 14692 (0x3964)state: Wait (Reason: UserRequest)
+	Id: 12020 (0x2ef4)state: Wait (Reason: UserRequest)
+	Id: 12924 (0x327c)state: Wait (Reason: ExecutionDelay)
+	Id: 20860 (0x517c)state: Wait (Reason: UserRequest)
+	Id: 25852 (0x64fc)state: Wait (Reason: UserRequest)
+	Id: 5308 (0x14bc)state: Wait (Reason: UserRequest)
+	Id: 27720 (0x6c48)state: Wait (Reason: UserRequest)
+	Id: 13412 (0x3464)state: Wait (Reason: UserRequest)
+	Id: 20652 (0x50ac)state: Wait (Reason: UserRequest)
+	Id: 30704 (0x77f0)state: Wait (Reason: UserRequest)
+	Id: 21696 (0x54c0)state: Wait (Reason: UserRequest)
+	Id: 31292 (0x7a3c)state: Wait (Reason: UserRequest)
+	Id: 22356 (0x5754)state: Wait (Reason: UserRequest)
+	Id: 12040 (0x2f08)state: Wait (Reason: UserRequest)
+	Id: 21012 (0x5214)state: Wait (Reason: UserRequest)
+	Id: 11144 (0x2b88)state: Wait (Reason: UserRequest)
+	Id: 27740 (0x6c5c)state: Wait (Reason: UserRequest)
+	Id: 29668 (0x73e4)state: Wait (Reason: UserRequest)
+	Id: 17216 (0x4340)state: Wait (Reason: UserRequest)
+	Id: 28760 (0x7058)state: Wait (Reason: UserRequest)
+	Id: 21808 (0x5530)state: Wait (Reason: UserRequest)
+	Id: 30404 (0x76c4)state: Wait (Reason: UserRequest)
+	Id: 26756 (0x6884)state: Wait (Reason: UserRequest)
+	Id: 31504 (0x7b10)state: Wait (Reason: UserRequest)
+	Id: 28368 (0x6ed0)state: Wait (Reason: UserRequest)
+	Id: 21440 (0x53c0)state: Wait (Reason: ExecutionDelay)
+	Id: 17528 (0x4478)state: Wait (Reason: UserRequest)
+	Id: 29192 (0x7208)state: Wait (Reason: UserRequest)
+	Id: 6920 (0x1b08)state: Wait (Reason: EventPairLow)
+	Id: 25216 (0x6280)state: Wait (Reason: UserRequest)
+	Id: 24520 (0x5fc8)state: Wait (Reason: UserRequest)
+	Id: 26016 (0x65a0)state: Wait (Reason: UserRequest)
+	Id: 23436 (0x5b8c)state: Wait (Reason: UserRequest)
+	Id: 29700 (0x7404)state: Wait (Reason: UserRequest)
+	Id: 7096 (0x1bb8)state: Wait (Reason: UserRequest)
+	Id: 5096 (0x13e8)state: Wait (Reason: UserRequest)
+	Id: 17464 (0x4438)state: Wait (Reason: UserRequest)
+	Id: 25488 (0x6390)state: Wait (Reason: UserRequest)
+	Id: 3632 (0x0e30)state: Wait (Reason: UserRequest)
+	Id: 31552 (0x7b40)state: Wait (Reason: UserRequest)
+	Id: 3560 (0x0de8)state: Wait (Reason: UserRequest)
+	Id: 25496 (0x6398)state: Wait (Reason: UserRequest)
+	Id: 31272 (0x7a28)state: Wait (Reason: EventPairLow)
+	Id: 24800 (0x60e0)state: Wait (Reason: UserRequest)
+	Id: 30920 (0x78c8)state: Wait (Reason: UserRequest)
+	Id: 29448 (0x7308)state: Wait (Reason: ExecutionDelay)
+	Id: 31544 (0x7b38)state: Wait (Reason: UserRequest)
+	Id: 30992 (0x7910)state: Wait (Reason: UserRequest)
+	Id: 28496 (0x6f50)state: Wait (Reason: UserRequest)
+	Id: 25120 (0x6220)state: Wait (Reason: UserRequest)
+	Id: 1176 (0x0498)state: Wait (Reason: ExecutionDelay)
+	Id: 30492 (0x771c)state: Wait (Reason: UserRequest)
+	Id: 8844 (0x228c)state: Wait (Reason: UserRequest)
+	Id: 28020 (0x6d74)state: Wait (Reason: UserRequest)
+	Id: 4892 (0x131c)state: Wait (Reason: UserRequest)
+	Id: 22672 (0x5890)state: Wait (Reason: UserRequest)
+	Id: 26728 (0x6868)state: Wait (Reason: ExecutionDelay)
+	Id: 30900 (0x78b4)state: Wait (Reason: UserRequest)
+	Id: 5760 (0x1680)state: Wait (Reason: UserRequest)
+	Id: 27352 (0x6ad8)state: Wait (Reason: UserRequest)
+	Id: 31032 (0x7938)state: Wait (Reason: UserRequest)
+	Id: 25112 (0x6218)state: Wait (Reason: UserRequest)
+	Id: 28720 (0x7030)state: Wait (Reason: UserRequest)
+	Id: 2408 (0x0968)state: Wait (Reason: UserRequest)
+	Id: 21648 (0x5490)state: Wait (Reason: UserRequest)
+	Id: 31324 (0x7a5c)state: Wait (Reason: EventPairLow)
+	Id: 18132 (0x46d4)state: Wait (Reason: UserRequest)
+	Id: 12004 (0x2ee4)state: Wait (Reason: UserRequest)
+	Id: 30788 (0x7844)state: Wait (Reason: UserRequest)
+	Id: 26972 (0x695c)state: Wait (Reason: UserRequest)
+	Id: 12532 (0x30f4)state: Wait (Reason: UserRequest)
+	Id: 15044 (0x3ac4)state: Wait (Reason: UserRequest)
+	Id: 30952 (0x78e8)state: Wait (Reason: UserRequest)
+	Id: 24784 (0x60d0)state: Wait (Reason: UserRequest)
+	Id: 19080 (0x4a88)state: Wait (Reason: UserRequest)
+	Id: 20156 (0x4ebc)state: Wait (Reason: UserRequest)
+	Id: 17728 (0x4540)state: Wait (Reason: UserRequest)
+	Id: 6280 (0x1888)state: Wait (Reason: UserRequest)
+	Id: 24928 (0x6160)state: Wait (Reason: UserRequest)
+	Id: 26144 (0x6620)state: Wait (Reason: UserRequest)
+	Id: 24088 (0x5e18)state: Wait (Reason: UserRequest)
+	Id: 18012 (0x465c)state: Wait (Reason: UserRequest)
+	Id: 30452 (0x76f4)state: Wait (Reason: UserRequest)
+	Id: 29328 (0x7290)state: Wait (Reason: UserRequest)
+	Id: 3620 (0x0e24)state: Wait (Reason: UserRequest)
+	Id: 22504 (0x57e8)state: Wait (Reason: UserRequest)
+	Id: 4380 (0x111c)state: Wait (Reason: UserRequest)
+	Id: 26356 (0x66f4)state: Wait (Reason: UserRequest)
+	Id: 21084 (0x525c)state: Wait (Reason: UserRequest)
+	Id: 10680 (0x29b8)state: Wait (Reason: UserRequest)
+	Id: 21044 (0x5234)state: Wait (Reason: UserRequest)
+	Id: 20564 (0x5054)state: Wait (Reason: ExecutionDelay)
+	Id: 9644 (0x25ac)state: Wait (Reason: EventPairLow)
+	Id: 21732 (0x54e4)state: Wait (Reason: EventPairLow)
+	Id: 20080 (0x4e70)state: Wait (Reason: EventPairLow)
+	Id: 26824 (0x68c8)state: Wait (Reason: EventPairLow)
+	Id: 28076 (0x6dac)state: Wait (Reason: UserRequest)
+	Id: 15248 (0x3b90)state: Wait (Reason: UserRequest)
+	Id: 26652 (0x681c)state: Wait (Reason: UserRequest)
+	Id: 27712 (0x6c40)state: Wait (Reason: UserRequest)
+	Id: 3708 (0x0e7c)state: Wait (Reason: UserRequest)
+	Id: 9980 (0x26fc)state: Wait (Reason: UserRequest)
+	Id: 31368 (0x7a88)state: Wait (Reason: EventPairLow)
+	Id: 12792 (0x31f8)state: Wait (Reason: UserRequest)
+	Id: 1960 (0x07a8)state: Wait (Reason: UserRequest)
+	Id: 19560 (0x4c68)state: Wait (Reason: UserRequest)
+	Id: 29016 (0x7158) (CURRENT)
+		Start address: 0x0000000000000000
+		State: Running
+		Priority: 16
+		Priority level: TimeCritical
+		Start time: 9/14/2025 2:33:35 PM
+		Total processor time: 00:00:41.0625000
+		User processor time: 00:00:41.0625000
+
+	Id: 17620 (0x44d4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:35 PM
+		Total processor time: 00:00:00.0312500
+		User processor time: 00:00:00.0312500
+
+	Id: 15488 (0x3c80)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:35 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 2632 (0x0a48)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 15
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:35 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 1908 (0x0774)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:37 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 5192 (0x1448)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24884 (0x6134)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 25012 (0x61b4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 17688 (0x4518)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 24824 (0x60f8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:01.7500000
+		User processor time: 00:00:01.7500000
+
+	Id: 10164 (0x27b4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26800 (0x68b0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.7343750
+		User processor time: 00:00:00.7343750
+
+	Id: 30472 (0x7708)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 15
+		Priority level: TimeCritical
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 20852 (0x5174)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:01.7187500
+		User processor time: 00:00:01.7187500
+
+	Id: 23936 (0x5d80)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:01.1718750
+		User processor time: 00:00:01.1718750
+
+	Id: 26464 (0x6760)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:01.0937500
+		User processor time: 00:00:01.0937500
+
+	Id: 24664 (0x6058)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.9218750
+		User processor time: 00:00:00.9218750
+
+	Id: 16084 (0x3ed4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.8750000
+		User processor time: 00:00:00.8750000
+
+	Id: 31168 (0x79c0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.7656250
+		User processor time: 00:00:00.7656250
+
+	Id: 20908 (0x51ac)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.5781250
+		User processor time: 00:00:00.5781250
+
+	Id: 28188 (0x6e1c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.4062500
+		User processor time: 00:00:00.4062500
+
+	Id: 11644 (0x2d7c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.2500000
+		User processor time: 00:00:00.2500000
+
+	Id: 17228 (0x434c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00.5156250
+		User processor time: 00:00:00.5156250
+
+	Id: 9740 (0x260c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 3624 (0x0e28)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26612 (0x67f4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 15
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 31148 (0x79ac)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 15
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:38 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 11828 (0x2e34)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 15
+		Priority level: TimeCritical
+		Start time: 9/14/2025 2:33:39 PM
+		Total processor time: 00:00:00.0312500
+		User processor time: 00:00:00.0312500
+
+	Id: 19624 (0x4ca8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 7
+		Priority level: BelowNormal
+		Start time: 9/14/2025 2:33:39 PM
+		Total processor time: 00:00:00.4218750
+		User processor time: 00:00:00.4218750
+
+	Id: 29936 (0x74f0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 15
+		Priority level: TimeCritical
+		Start time: 9/14/2025 2:33:39 PM
+		Total processor time: 00:00:00.5156250
+		User processor time: 00:00:00.5156250
+
+	Id: 2560 (0x0a00)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:39 PM
+		Total processor time: 00:00:09.0312500
+		User processor time: 00:00:09.0312500
+
+	Id: 31436 (0x7acc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 16
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:39 PM
+		Total processor time: 00:01:06.3281250
+		User processor time: 00:01:06.3281250
+
+	Id: 17136 (0x42f0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:39 PM
+		Total processor time: 00:00:00.0468750
+		User processor time: 00:00:00.0468750
+
+	Id: 13012 (0x32d4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 22016 (0x5600)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: Unknown)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 25156 (0x6244)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: Unknown)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 29960 (0x7508)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00.3593750
+		User processor time: 00:00:00.3593750
+
+	Id: 3964 (0x0f7c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 10968 (0x2ad8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24952 (0x6178)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 12
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 2188 (0x088c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 21604 (0x5464)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 18248 (0x4748)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 17636 (0x44e4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 11700 (0x2db4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 30656 (0x77c0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 14768 (0x39b0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 16
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:11.7343750
+		User processor time: 00:00:11.7343750
+
+	Id: 30508 (0x772c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 11
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00.5625000
+		User processor time: 00:00:00.5625000
+
+	Id: 24900 (0x6144)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 27584 (0x6bc0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 27388 (0x6afc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 23716 (0x5ca4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:40 PM
+		Total processor time: 00:00:00.0937500
+		User processor time: 00:00:00.0937500
+
+	Id: 26924 (0x692c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.4687500
+		User processor time: 00:00:00.4687500
+
+	Id: 26480 (0x6770)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.4218750
+		User processor time: 00:00:00.4218750
+
+	Id: 29664 (0x73e0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.2343750
+		User processor time: 00:00:00.2343750
+
+	Id: 21672 (0x54a8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.2343750
+		User processor time: 00:00:00.2343750
+
+	Id: 11964 (0x2ebc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.5937500
+		User processor time: 00:00:00.5937500
+
+	Id: 6852 (0x1ac4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.5156250
+		User processor time: 00:00:00.5156250
+
+	Id: 26328 (0x66d8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.0468750
+		User processor time: 00:00:00.0468750
+
+	Id: 25660 (0x643c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:01.4687500
+		User processor time: 00:00:01.4687500
+
+	Id: 1848 (0x0738)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:01.5937500
+		User processor time: 00:00:01.5937500
+
+	Id: 6808 (0x1a98)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:01.6718750
+		User processor time: 00:00:01.6718750
+
+	Id: 9736 (0x2608)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:01.5156250
+		User processor time: 00:00:01.5156250
+
+	Id: 4452 (0x1164)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:01.6093750
+		User processor time: 00:00:01.6093750
+
+	Id: 14692 (0x3964)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 3
+		Priority level: Idle
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:01.4843750
+		User processor time: 00:00:01.4843750
+
+	Id: 12020 (0x2ef4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 16
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:02.7812500
+		User processor time: 00:00:02.7812500
+
+	Id: 12924 (0x327c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 20860 (0x517c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 12
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 25852 (0x64fc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:07.1093750
+		User processor time: 00:00:07.1093750
+
+	Id: 5308 (0x14bc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:27.2812500
+		User processor time: 00:00:27.2812500
+
+	Id: 27720 (0x6c48)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 13412 (0x3464)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 20652 (0x50ac)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 30704 (0x77f0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 21696 (0x54c0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.1875000
+		User processor time: 00:00:00.1875000
+
+	Id: 31292 (0x7a3c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.4531250
+		User processor time: 00:00:00.4531250
+
+	Id: 22356 (0x5754)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.3125000
+		User processor time: 00:00:00.3125000
+
+	Id: 12040 (0x2f08)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.3750000
+		User processor time: 00:00:00.3750000
+
+	Id: 21012 (0x5214)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.3437500
+		User processor time: 00:00:00.3437500
+
+	Id: 11144 (0x2b88)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.3906250
+		User processor time: 00:00:00.3906250
+
+	Id: 27740 (0x6c5c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.2812500
+		User processor time: 00:00:00.2812500
+
+	Id: 29668 (0x73e4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.4218750
+		User processor time: 00:00:00.4218750
+
+	Id: 17216 (0x4340)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.4062500
+		User processor time: 00:00:00.4062500
+
+	Id: 28760 (0x7058)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.3125000
+		User processor time: 00:00:00.3125000
+
+	Id: 21808 (0x5530)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.3750000
+		User processor time: 00:00:00.3750000
+
+	Id: 30404 (0x76c4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.1093750
+		User processor time: 00:00:00.1093750
+
+	Id: 26756 (0x6884)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 31504 (0x7b10)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 22
+		Priority level: 14
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00.0625000
+		User processor time: 00:00:00.0625000
+
+	Id: 28368 (0x6ed0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 21440 (0x53c0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 15
+		Priority level: TimeCritical
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:14.5468750
+		User processor time: 00:00:14.5468750
+
+	Id: 17528 (0x4478)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 7
+		Priority level: BelowNormal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 29192 (0x7208)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 15
+		Priority level: TimeCritical
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 6920 (0x1b08)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 25216 (0x6280)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:41 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24520 (0x5fc8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 7
+		Priority level: BelowNormal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26016 (0x65a0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 23436 (0x5b8c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 29700 (0x7404)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 7096 (0x1bb8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 5096 (0x13e8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 17464 (0x4438)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 25488 (0x6390)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00.0625000
+		User processor time: 00:00:00.0625000
+
+	Id: 3632 (0x0e30)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00.0312500
+		User processor time: 00:00:00.0312500
+
+	Id: 31552 (0x7b40)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00.0312500
+		User processor time: 00:00:00.0312500
+
+	Id: 3560 (0x0de8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 25496 (0x6398)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 31272 (0x7a28)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:43 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24800 (0x60e0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 30920 (0x78c8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 16
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 29448 (0x7308)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 7
+		Priority level: BelowNormal
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 31544 (0x7b38)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00.3125000
+		User processor time: 00:00:00.3125000
+
+	Id: 30992 (0x7910)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00.2343750
+		User processor time: 00:00:00.2343750
+
+	Id: 28496 (0x6f50)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00.2656250
+		User processor time: 00:00:00.2656250
+
+	Id: 25120 (0x6220)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:00.1562500
+		User processor time: 00:00:00.1562500
+
+	Id: 1176 (0x0498)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:44 PM
+		Total processor time: 00:00:01.1875000
+		User processor time: 00:00:01.1875000
+
+	Id: 30492 (0x771c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00.6093750
+		User processor time: 00:00:00.6093750
+
+	Id: 8844 (0x228c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 28020 (0x6d74)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 4892 (0x131c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 7
+		Priority level: BelowNormal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00.0937500
+		User processor time: 00:00:00.0937500
+
+	Id: 22672 (0x5890)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26728 (0x6868)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00.2187500
+		User processor time: 00:00:00.2187500
+
+	Id: 30900 (0x78b4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 5760 (0x1680)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 27352 (0x6ad8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 31032 (0x7938)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 25112 (0x6218)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 7
+		Priority level: BelowNormal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 28720 (0x7030)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 2408 (0x0968)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 21648 (0x5490)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:45 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 31324 (0x7a5c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 18132 (0x46d4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 12004 (0x2ee4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00.1250000
+		User processor time: 00:00:00.1250000
+
+	Id: 30788 (0x7844)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00.0781250
+		User processor time: 00:00:00.0781250
+
+	Id: 26972 (0x695c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00.1093750
+		User processor time: 00:00:00.1093750
+
+	Id: 12532 (0x30f4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 9
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00.1093750
+		User processor time: 00:00:00.1093750
+
+	Id: 15044 (0x3ac4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00.0937500
+		User processor time: 00:00:00.0937500
+
+	Id: 30952 (0x78e8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24784 (0x60d0)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 19080 (0x4a88)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 20156 (0x4ebc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 17728 (0x4540)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 6280 (0x1888)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24928 (0x6160)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26144 (0x6620)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 24088 (0x5e18)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 18012 (0x465c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 6
+		Priority level: Lowest
+		Start time: 9/14/2025 2:33:46 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 30452 (0x76f4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 29328 (0x7290)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 3620 (0x0e24)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00.0312500
+		User processor time: 00:00:00.0312500
+
+	Id: 22504 (0x57e8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 4380 (0x111c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26356 (0x66f4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 21084 (0x525c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00.0156250
+		User processor time: 00:00:00.0156250
+
+	Id: 10680 (0x29b8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 21044 (0x5234)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Highest
+		Start time: 9/14/2025 2:33:47 PM
+		Total processor time: 00:00:00.0468750
+		User processor time: 00:00:00.0468750
+
+	Id: 20564 (0x5054)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: ExecutionDelay)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:49 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 9644 (0x25ac)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 11
+		Priority level: AboveNormal
+		Start time: 9/14/2025 2:33:49 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 21732 (0x54e4)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:50 PM
+		Total processor time: 00:00:00.4218750
+		User processor time: 00:00:00.4218750
+
+	Id: 20080 (0x4e70)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:50 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26824 (0x68c8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:33:50 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 28076 (0x6dac)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:22 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 15248 (0x3b90)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 8
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:22 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 26652 (0x681c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:56 PM
+		Total processor time: 00:00:00.0937500
+		User processor time: 00:00:00.0937500
+
+	Id: 27712 (0x6c40)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:56 PM
+		Total processor time: 00:00:00.0781250
+		User processor time: 00:00:00.0781250
+
+	Id: 3708 (0x0e7c)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:56 PM
+		Total processor time: 00:00:00.0468750
+		User processor time: 00:00:00.0468750
+
+	Id: 9980 (0x26fc)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:56 PM
+		Total processor time: 00:00:00.0468750
+		User processor time: 00:00:00.0468750
+
+	Id: 31368 (0x7a88)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: EventPairLow)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:34:56 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 12792 (0x31f8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:35:05 PM
+		Total processor time: 00:00:00.0781250
+		User processor time: 00:00:00.0781250
+
+	Id: 1960 (0x07a8)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:35:07 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+	Id: 19560 (0x4c68)
+		Start address: 0x0000000000000000
+		State: Wait (Reason: UserRequest)
+		Priority: 10
+		Priority level: Normal
+		Start time: 9/14/2025 2:35:09 PM
+		Total processor time: 00:00:00
+		User processor time: 00:00:00
+
+Modules:
+	Name: GTA5.exe; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe (Grand Theft Auto V v1.0.3586.0, by Rockstar Games)
+	Name: ntdll.dll; path: C:\WINDOWS\SYSTEM32\ntdll.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: KERNEL32.DLL; path: C:\WINDOWS\System32\KERNEL32.DLL (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: KERNELBASE.dll; path: C:\WINDOWS\System32\KERNELBASE.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: USER32.dll; path: C:\WINDOWS\System32\USER32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: win32u.dll; path: C:\WINDOWS\System32\win32u.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: GDI32.dll; path: C:\WINDOWS\System32\GDI32.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: gdi32full.dll; path: C:\WINDOWS\System32\gdi32full.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: msvcp_win.dll; path: C:\WINDOWS\System32\msvcp_win.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: ucrtbase.dll; path: C:\WINDOWS\System32\ucrtbase.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: PSAPI.DLL; path: C:\WINDOWS\System32\PSAPI.DLL (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: WS2_32.dll; path: C:\WINDOWS\System32\WS2_32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: RPCRT4.dll; path: C:\WINDOWS\System32\RPCRT4.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: VERSION.dll; path: C:\WINDOWS\SYSTEM32\VERSION.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: DSOUND.dll; path: C:\WINDOWS\SYSTEM32\DSOUND.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: GFSDK_ShadowLib.win64.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_ShadowLib.win64.dll ( v, by )
+	Name: CRYPT32.dll; path: C:\WINDOWS\System32\CRYPT32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: msvcrt.dll; path: C:\WINDOWS\System32\msvcrt.dll (Microsoft® Windows® Operating System v7.0.26100.5074, by Microsoft Corporation)
+	Name: advapi32.dll; path: C:\WINDOWS\System32\advapi32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: WINTRUST.dll; path: C:\WINDOWS\System32\WINTRUST.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: bink2w64.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\bink2w64.dll (Bink and Smacker v1.994a, by RAD Game Tools, Inc.)
+	Name: sechost.dll; path: C:\WINDOWS\System32\sechost.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: ole32.dll; path: C:\WINDOWS\System32\ole32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: IMM32.dll; path: C:\WINDOWS\System32\IMM32.dll (Microsoft® Windows® Operating System v10.0.26100.4484, by Microsoft Corporation)
+	Name: combase.dll; path: C:\WINDOWS\System32\combase.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: SHLWAPI.dll; path: C:\WINDOWS\System32\SHLWAPI.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: SHELL32.dll; path: C:\WINDOWS\System32\SHELL32.dll (Microsoft® Windows® Operating System v10.0.26100.4768, by Microsoft Corporation)
+	Name: WININET.dll; path: C:\WINDOWS\SYSTEM32\WININET.dll (Internet Explorer v11.00.26100.2308, by Microsoft Corporation)
+	Name: WINMM.dll; path: C:\WINDOWS\SYSTEM32\WINMM.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: wintypes.dll; path: C:\WINDOWS\System32\wintypes.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: MF.dll; path: C:\WINDOWS\SYSTEM32\MF.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: OLEAUT32.dll; path: C:\WINDOWS\System32\OLEAUT32.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: shcore.dll; path: C:\WINDOWS\System32\shcore.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: MFPlat.DLL; path: C:\WINDOWS\SYSTEM32\MFPlat.DLL (Microsoft® Windows® Operating System v10.0.26100.4768, by Microsoft Corporation)
+	Name: msdmo.dll; path: C:\WINDOWS\SYSTEM32\msdmo.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: MFReadWrite.dll; path: C:\WINDOWS\SYSTEM32\MFReadWrite.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: PROPSYS.dll; path: C:\WINDOWS\SYSTEM32\PROPSYS.dll (Windows® Search v7.0.26100.4768, by Microsoft Corporation)
+	Name: ResampleDmo.DLL; path: C:\WINDOWS\SYSTEM32\ResampleDmo.DLL (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: WTSAPI32.dll; path: C:\WINDOWS\SYSTEM32\WTSAPI32.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: GFSDK_TXAA_AlphaResolve.win64.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_TXAA_AlphaResolve.win64.dll ( v, by )
+	Name: d3d9.dll; path: C:\WINDOWS\SYSTEM32\d3d9.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: powrprof.dll; path: C:\WINDOWS\SYSTEM32\powrprof.dll (Microsoft® Windows® Operating System v10.0.26100.4202, by Microsoft Corporation)
+	Name: DINPUT8.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\DINPUT8.dll (GTA V Asi loader v1.0.0.1, by Alexander Blade)
+	Name: XINPUT1_4.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\XINPUT1_4.dll (Microsoft® Windows® Operating System v6.2.9200.16384, by Microsoft Corporation)
+	Name: D3DCOMPILER_43.dll; path: C:\WINDOWS\SYSTEM32\D3DCOMPILER_43.dll (Microsoft® DirectX for Windows® v9.29.952.3111, by Microsoft Corporation)
+	Name: bcrypt.dll; path: C:\WINDOWS\SYSTEM32\bcrypt.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: IPHLPAPI.DLL; path: C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: winmmbase.dll; path: C:\WINDOWS\SYSTEM32\winmmbase.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: d3dx9_43.dll; path: C:\WINDOWS\SYSTEM32\d3dx9_43.dll (Microsoft® DirectX for Windows® v9.29.952.3111, by Microsoft Corporation)
+	Name: cfgmgr32.dll; path: C:\WINDOWS\SYSTEM32\cfgmgr32.dll (Microsoft® Windows® Operating System v10.0.26100.4202, by Microsoft Corporation)
+	Name: SspiCli.dll; path: C:\WINDOWS\SYSTEM32\SspiCli.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: OPENGL32.dll; path: C:\WINDOWS\SYSTEM32\OPENGL32.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: dwmapi.dll; path: C:\WINDOWS\SYSTEM32\dwmapi.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: DEVOBJ.dll; path: C:\WINDOWS\SYSTEM32\DEVOBJ.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: dxcore.dll; path: C:\WINDOWS\SYSTEM32\dxcore.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: GLU32.dll; path: C:\WINDOWS\SYSTEM32\GLU32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: MFCORE.DLL; path: C:\WINDOWS\SYSTEM32\MFCORE.DLL (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: UMPDC.dll; path: C:\WINDOWS\SYSTEM32\UMPDC.dll (Microsoft® Windows® Operating System v10.0.26100.1301, by Microsoft Corporation)
+	Name: bcryptPrimitives.dll; path: C:\WINDOWS\System32\bcryptPrimitives.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: RTWorkQ.DLL; path: C:\WINDOWS\SYSTEM32\RTWorkQ.DLL (Microsoft® Windows® Operating System v10.0.26100.3912, by Microsoft Corporation)
+	Name: MSASN1.dll; path: C:\WINDOWS\SYSTEM32\MSASN1.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: dinput8.dll; path: C:\WINDOWS\system32\dinput8.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: gameoverlayrenderer64.dll; path: C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll (Steam Game Overlay Renderer v01.00.00.01, by Valve Corporation)
+	Name: inputhost.dll; path: C:\WINDOWS\SYSTEM32\inputhost.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: CoreMessaging.dll; path: C:\WINDOWS\SYSTEM32\CoreMessaging.dll (Microsoft® Windows® Operating System v10.0.26100.4202, by Microsoft Corporation)
+	Name: CRYPTBASE.DLL; path: C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: HeapAdjuster.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\HeapAdjuster.asi ( v, by )
+	Name: Menyoo.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Menyoo.asi ( v, by )
+	Name: ScriptHookV.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookV.dll (ScriptHookV v3586.0.889.22, by Alexander Blade)
+	Name: d3dx11_43.dll; path: C:\WINDOWS\SYSTEM32\d3dx11_43.dll (Microsoft® DirectX for Windows® v9.29.952.3111, by Microsoft Corporation)
+	Name: NativeTrainer.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\NativeTrainer.asi ( v, by )
+	Name: openCameraV.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\openCameraV.asi (openCamera for GTAV v1.0.0.1, by OpenIV Dev. Team)
+	Name: OpenIV.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\OpenIV.asi (OpenIV v2.0.0.0, by OpenIV Team)
+	Name: PackfileLimitAdjuster.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\PackfileLimitAdjuster.asi ( v, by )
+	Name: ScriptHookVDotNet.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet.asi ( v, by )
+	Name: VCRUNTIME140.dll; path: C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll (Microsoft® Visual Studio® v14.44.35211.0, by Microsoft Corporation)
+	Name: mscoree.dll; path: C:\WINDOWS\SYSTEM32\mscoree.dll (Microsoft® Windows® Operating System v10.0.26100.3624, by Microsoft Corporation)
+	Name: mscoreei.dll; path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscoreei.dll (Microsoft® .NET Framework v4.8.9065.0, by Microsoft Corporation)
+	Name: kernel.appcore.dll; path: C:\WINDOWS\SYSTEM32\kernel.appcore.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: VStancer.asi; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\VStancer.asi ( v, by )
+	Name: windows.storage.dll; path: C:\WINDOWS\SYSTEM32\windows.storage.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: sdk_legacy_led_x64.dll; path: C:\Program Files\LGHUB\sdks\sdk_legacy_led_x64.dll (Logitech G Legacy LED SDK v9.2.65, by Logitech, Inc.)
+	Name: MSVCP140.dll; path: C:\WINDOWS\SYSTEM32\MSVCP140.dll (Microsoft® Visual Studio® v14.44.35211.0, by Microsoft Corporation)
+	Name: VCRUNTIME140_1.dll; path: C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll (Microsoft® Visual Studio® v14.44.35211.0, by Microsoft Corporation)
+	Name: mswsock.dll; path: C:\WINDOWS\system32\mswsock.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: dbghelp.dll; path: C:\WINDOWS\SYSTEM32\dbghelp.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: dbgcore.DLL; path: C:\WINDOWS\SYSTEM32\dbgcore.DLL (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: d3d12.dll; path: C:\WINDOWS\SYSTEM32\d3d12.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: CRYPTSP.dll; path: C:\WINDOWS\SYSTEM32\CRYPTSP.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: rsaenh.dll; path: C:\WINDOWS\system32\rsaenh.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: uxtheme.dll; path: C:\WINDOWS\system32\uxtheme.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: clbcatq.dll; path: C:\WINDOWS\System32\clbcatq.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: dxdiagn.dll; path: C:\Windows\System32\dxdiagn.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: d3d11.dll; path: C:\Windows\System32\d3d11.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: WMICLNT.dll; path: C:\Windows\System32\WMICLNT.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: dxgi.dll; path: C:\Windows\System32\dxgi.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: imagehlp.dll; path: C:\WINDOWS\System32\imagehlp.dll (Microsoft® Windows® Operating System v10.0.26100.4202, by Microsoft Corporation)
+	Name: wbemprox.dll; path: C:\WINDOWS\system32\wbem\wbemprox.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: wbemcomn.dll; path: C:\WINDOWS\SYSTEM32\wbemcomn.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: wbemsvc.dll; path: C:\WINDOWS\system32\wbem\wbemsvc.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: fastprox.dll; path: C:\WINDOWS\system32\wbem\fastprox.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: amsi.dll; path: C:\WINDOWS\SYSTEM32\amsi.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: USERENV.dll; path: C:\WINDOWS\SYSTEM32\USERENV.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: profapi.dll; path: C:\WINDOWS\SYSTEM32\profapi.dll (Microsoft® Windows® Operating System v10.0.26100.4768, by Microsoft Corporation)
+	Name: MpOav.dll; path: C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25070.5-0\MpOav.dll (Microsoft® Windows® Operating System v4.18.25070.5, by Microsoft Corporation)
+	Name: setupapi.dll; path: C:\WINDOWS\System32\setupapi.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: gpapi.dll; path: C:\WINDOWS\SYSTEM32\gpapi.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: cryptnet.dll; path: C:\Windows\System32\cryptnet.dll (Microsoft® Windows® Operating System v10.0.26100.3624, by Microsoft Corporation)
+	Name: WINNSI.DLL; path: C:\WINDOWS\SYSTEM32\WINNSI.DLL (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: NSI.dll; path: C:\WINDOWS\System32\NSI.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: directxdatabasehelper.dll; path: C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: windows.staterepositorycore.dll; path: C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: steam_api64.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\steam_api64.dll (Steam Client API v01.00.00.01, by Valve Corporation)
+	Name: steamclient64.dll; path: C:\Program Files (x86)\Steam\steamclient64.dll (Steam v03.00.00.01, by Valve Corporation)
+	Name: vstdlib_s64.dll; path: C:\Program Files (x86)\Steam\vstdlib_s64.dll (Steam v03.00.00.01, by Valve Corporation)
+	Name: Secur32.dll; path: C:\WINDOWS\SYSTEM32\Secur32.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: tier0_s64.dll; path: C:\Program Files (x86)\Steam\tier0_s64.dll ( tier0_s Dynamic Link Library v01.00.00.01, by Valve Corporation)
+	Name: nvapi64.dll; path: C:\WINDOWS\system32\nvapi64.dll (NVIDIA Windows drivers v32.0.15.8115, by NVIDIA Corporation)
+	Name: wldp.dll; path: C:\WINDOWS\SYSTEM32\wldp.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: drvstore.dll; path: C:\WINDOWS\SYSTEM32\drvstore.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: D3D10_1.DLL; path: C:\WINDOWS\SYSTEM32\D3D10_1.DLL (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: d3d10_1core.dll; path: C:\WINDOWS\SYSTEM32\d3d10_1core.dll (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: nvspcap64.dll; path: C:\WINDOWS\system32\nvspcap64.dll (NVIDIA App v11.0.5.245, by NVIDIA Corporation)
+	Name: ntmarta.dll; path: C:\WINDOWS\SYSTEM32\ntmarta.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: MSCTF.dll; path: C:\WINDOWS\System32\MSCTF.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: textinputframework.dll; path: C:\WINDOWS\SYSTEM32\textinputframework.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: CoreUIComponents.dll; path: C:\WINDOWS\SYSTEM32\CoreUIComponents.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: WINSTA.dll; path: C:\WINDOWS\SYSTEM32\WINSTA.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: nvldumdx.dll; path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvldumdx.dll (NVIDIA driver loader v32.0.15.8115, by NVIDIA Corporation)
+	Name: nvgpucomp64.dll; path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvgpucomp64.dll (NVIDIA GPU Compiler Driver v32.0.15.8115, by NVIDIA Corporation)
+	Name: NvMessageBus.dll; path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\Display.NvContainer\NvMessageBus.dll ( v, by )
+	Name: NvMemMapStoragex.dll; path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\NvMemMapStoragex.dll ( v, by )
+	Name: ShadowLibx64.dll; path: C:\Users\amata\AppData\Local\Temp\smgf00vfbvn0z1id\ShadowLibx64.dll (RAGE Plugin Hook v1.122.1379.17094, by MulleDK19 / LMS)
+	Name: FW1FontWrapper.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\FW1FontWrapper.dll ( v, by )
+	Name: XINPUT9_1_0.dll; path: C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: nvwgf2umx.dll; path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvwgf2umx.dll (NVIDIA D3D10 drivers v32.0.15.8115, by NVIDIA Corporation)
+	Name: DispBroker.Desktop.dll; path: C:\Windows\System32\DispBroker.Desktop.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: clr.dll; path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll (Microsoft® .NET Framework v4.8.9310.0, by Microsoft Corporation)
+	Name: VCRUNTIME140_1_CLR0400.dll; path: C:\WINDOWS\SYSTEM32\VCRUNTIME140_1_CLR0400.dll (Microsoft® Visual Studio® v14.32.31326.0, by Microsoft Corporation)
+	Name: VCRUNTIME140_CLR0400.dll; path: C:\WINDOWS\SYSTEM32\VCRUNTIME140_CLR0400.dll (Microsoft® Visual Studio® v14.32.31326.0, by Microsoft Corporation)
+	Name: ucrtbase_clr0400.dll; path: C:\WINDOWS\SYSTEM32\ucrtbase_clr0400.dll (Microsoft® Visual Studio® v14.32.31326.0, by Microsoft Corporation)
+	Name: mscorlib.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\mscorlib\8967064a93c70884749ad00de74dd7a1\mscorlib.ni.dll (Microsoft® .NET Framework v4.8.9310.0, by Microsoft Corporation)
+	Name: clrjit.dll; path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clrjit.dll (Microsoft® .NET Framework v4.8.9310.0, by Microsoft Corporation)
+	Name: diasymreader.dll; path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\diasymreader.dll (Microsoft® .NET Framework v14.8.9294.0, by Microsoft Corporation)
+	Name: nvppex.dll; path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvppex.dll (NVIDIA driver loader v32.0.15.8115, by NVIDIA Corporation)
+	Name: System.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System\fc7509f3c5d3bef48dfefcb3947d3b56\System.ni.dll (Microsoft® .NET Framework v4.8.9310.0, by Microsoft Corporation)
+	Name: System.Drawing.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Drawing\f8bbe472ae72b0b981525825470239b1\System.Drawing.ni.dll (Microsoft® .NET Framework v4.8.9032.0, by Microsoft Corporation)
+	Name: System.Windows.Forms.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Windows.Forms\af74927d580d9bb054e920236bc5e749\System.Windows.Forms.ni.dll (Microsoft® .NET Framework v4.8.9256.0, by Microsoft Corporation)
+	Name: dcomp.dll; path: C:\WINDOWS\SYSTEM32\dcomp.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: Microsoft.Internal.WarpPal.dll; path: C:\Windows\System32\Microsoft.Internal.WarpPal.dll ( v, by )
+	Name: OneCoreCommonProxyStub.dll; path: C:\Windows\System32\OneCoreCommonProxyStub.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: OneCoreUAPCommonProxyStub.dll; path: C:\Windows\System32\OneCoreUAPCommonProxyStub.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: HID.DLL; path: C:\WINDOWS\SYSTEM32\HID.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: System.Core.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Core\e9e4f53a0f05c9165f9166283afc3394\System.Core.ni.dll (Microsoft® .NET Framework v4.8.9316.0, by Microsoft Corporation)
+	Name: System.Xml.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Xml\712338b74f96d32fc2d4d8d3c14667d5\System.Xml.ni.dll (Microsoft® .NET Framework v4.8.9032.0, by Microsoft Corporation)
+	Name: MMDevApi.dll; path: C:\WINDOWS\System32\MMDevApi.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: System.Configuration.ni.dll; path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Configuration\644bd477844b170a810da57275ca6ea3\System.Configuration.ni.dll (Microsoft® .NET Framework v4.8.9032.0, by Microsoft Corporation)
+	Name: XAudio2_7.dll; path: C:\WINDOWS\system32\XAudio2_7.dll (Microsoft® DirectX for Windows® v9.29.1962.0, by Microsoft Corporation)
+	Name: comctl32.dll; path: C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.5074_none_3e0d6f78e32fd63f\comctl32.dll (Microsoft® Windows® Operating System v10.0.26100.1591, by Microsoft Corporation)
+	Name: AUDIOSES.DLL; path: C:\WINDOWS\SYSTEM32\AUDIOSES.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: resourcepolicyclient.dll; path: C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: gdiplus.dll; path: C:\WINDOWS\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.5074_none_6ef8625e3dc2500d\gdiplus.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: DWrite.dll; path: C:\WINDOWS\SYSTEM32\DWrite.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: WindowsCodecs.dll; path: C:\WINDOWS\SYSTEM32\WindowsCodecs.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: Windows.UI.dll; path: C:\Windows\System32\Windows.UI.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: avrt.dll; path: C:\WINDOWS\SYSTEM32\avrt.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: TextShaping.dll; path: C:\WINDOWS\SYSTEM32\TextShaping.dll (Microsoft® Windows® Operating System v10.0.26100.4343, by Microsoft Corporation)
+	Name: napinsp.dll; path: C:\WINDOWS\system32\napinsp.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: DNSAPI.dll; path: C:\WINDOWS\SYSTEM32\DNSAPI.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: winrnr.dll; path: C:\WINDOWS\System32\winrnr.dll (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: nlansp_c.dll; path: C:\WINDOWS\system32\nlansp_c.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: wshbth.dll; path: C:\WINDOWS\system32\wshbth.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: fwpuclnt.dll; path: C:\WINDOWS\System32\fwpuclnt.dll (Microsoft® Windows® Operating System v10.0.26100.3915, by Microsoft Corporation)
+	Name: rasadhlp.dll; path: C:\Windows\System32\rasadhlp.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: socialclub.dll; path: C:\Program Files\Rockstar Games\Social Club\socialclub.dll (Social Club v2.4.0.101, by Take-Two Interactive Software, Inc.)
+	Name: chrome_elf.dll; path: C:\Program Files\Rockstar Games\Social Club\chrome_elf.dll (Chromium v109.0.5414.120, by The Chromium Authors)
+	Name: libcef.dll; path: C:\Program Files\Rockstar Games\Social Club\libcef.dll (Chromium Embedded Framework (CEF) Dynamic Link Library v109.1.18+ge5dd31c+chromium-109.0.5414.120, by )
+	Name: COMDLG32.dll; path: C:\WINDOWS\System32\COMDLG32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: COMCTL32.dll; path: C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.5074_none_87eb64a37a300c6e\COMCTL32.dll (Microsoft® Windows® Operating System v10.0.26100.1591, by Microsoft Corporation)
+	Name: UIAutomationCore.DLL; path: C:\WINDOWS\SYSTEM32\UIAutomationCore.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: NETAPI32.dll; path: C:\WINDOWS\SYSTEM32\NETAPI32.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: WINHTTP.dll; path: C:\WINDOWS\SYSTEM32\WINHTTP.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: WINSPOOL.DRV; path: C:\WINDOWS\SYSTEM32\WINSPOOL.DRV (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: ncrypt.dll; path: C:\WINDOWS\SYSTEM32\ncrypt.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: USP10.dll; path: C:\WINDOWS\SYSTEM32\USP10.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: urlmon.dll; path: C:\WINDOWS\SYSTEM32\urlmon.dll (Internet Explorer v11.00.26100.2308, by Microsoft Corporation)
+	Name: dxva2.dll; path: C:\WINDOWS\SYSTEM32\dxva2.dll (Microsoft® Windows® Operating System v10.0.26100.3624, by Microsoft Corporation)
+	Name: wevtapi.dll; path: C:\WINDOWS\SYSTEM32\wevtapi.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: CRYPTUI.dll; path: C:\WINDOWS\SYSTEM32\CRYPTUI.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: credui.dll; path: C:\WINDOWS\SYSTEM32\credui.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: OLEACC.dll; path: C:\WINDOWS\SYSTEM32\OLEACC.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: dhcpcsvc.DLL; path: C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: ESENT.dll; path: C:\WINDOWS\SYSTEM32\ESENT.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: iertutil.dll; path: C:\WINDOWS\SYSTEM32\iertutil.dll (Internet Explorer v11.00.26100.2308, by Microsoft Corporation)
+	Name: DSROLE.DLL; path: C:\WINDOWS\SYSTEM32\DSROLE.DLL (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: srvcli.dll; path: C:\WINDOWS\SYSTEM32\srvcli.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: netutils.dll; path: C:\WINDOWS\SYSTEM32\netutils.dll (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: WKSCLI.DLL; path: C:\WINDOWS\SYSTEM32\WKSCLI.DLL (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: SAMCLI.DLL; path: C:\WINDOWS\SYSTEM32\SAMCLI.DLL (Microsoft® Windows® Operating System v10.0.26100.4768, by Microsoft Corporation)
+	Name: NTASN1.dll; path: C:\WINDOWS\SYSTEM32\NTASN1.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: wdmaud.drv; path: C:\WINDOWS\SYSTEM32\wdmaud.drv (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: msacm32.drv; path: C:\WINDOWS\SYSTEM32\msacm32.drv (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: MSACM32.dll; path: C:\WINDOWS\SYSTEM32\MSACM32.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: midimap.dll; path: C:\WINDOWS\SYSTEM32\midimap.dll (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: FirewallAPI.dll; path: C:\Windows\System32\FirewallAPI.dll (Microsoft® Windows® Operating System v10.0.26100.4768, by Microsoft Corporation)
+	Name: fwbase.dll; path: C:\Windows\System32\fwbase.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: FWPolicyIOMgr.dll; path: C:\Windows\System32\FWPolicyIOMgr.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: netprofm.dll; path: C:\WINDOWS\System32\netprofm.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: npmproxy.dll; path: C:\WINDOWS\System32\npmproxy.dll (Microsoft® Windows® Operating System v10.0.26100.1150, by Microsoft Corporation)
+	Name: MPCLIENT.DLL; path: C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25070.5-0\MPCLIENT.DLL (Microsoft® Windows® Operating System v4.18.25070.5, by Microsoft Corporation)
+	Name: DiscordHook64.dll; path: C:\Users\amata\AppData\Local\Discord\app-1.0.9208\modules\discord_hook-1\discord_hook\ebb5c86ef75874\DiscordHook64.dll ( v, by )
+	Name: D3DCompiler_47.dll; path: C:\WINDOWS\SYSTEM32\D3DCompiler_47.dll (Microsoft® Windows® Operating System v10.0.26100.6584, by Microsoft Corporation)
+	Name: SlimDX.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\SlimDX.dll ( v, by )
+	Name: MSVCR100.dll; path: C:\WINDOWS\SYSTEM32\MSVCR100.dll (Microsoft® Visual Studio® 2010 v10.00.40219.325, by Microsoft Corporation)
+	Name: MSVCP100.dll; path: C:\WINDOWS\SYSTEM32\MSVCP100.dll (Microsoft® Visual Studio® 2010 v10.00.40219.325, by Microsoft Corporation)
+	Name: dhcpcsvc6.DLL; path: C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: WindowsCodecsExt.dll; path: C:\WINDOWS\SYSTEM32\WindowsCodecsExt.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: msxml6.dll; path: C:\Windows\System32\msxml6.dll (Microsoft XML Core Services v6.30.26100.5074, by Microsoft Corporation)
+	Name: mfsrcsnk.dll; path: C:\WINDOWS\System32\mfsrcsnk.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: CompPkgSup.DLL; path: C:\WINDOWS\SYSTEM32\CompPkgSup.DLL (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: Windows.Media.dll; path: C:\Windows\System32\Windows.Media.dll (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: Windows.ApplicationModel.dll; path: C:\Windows\System32\Windows.ApplicationModel.dll (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: mp3dmod.dll; path: C:\Windows\System32\mp3dmod.dll (Microsoft® Windows® Operating System v10.0.26100.4202, by Microsoft Corporation)
+	Name: AppXDeploymentClient.dll; path: C:\Windows\System32\AppXDeploymentClient.dll (Microsoft® Windows® Operating System v10.0.26100.4768, by Microsoft Corporation)
+	Name: ScriptHookVDotNet2.dll; path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet2.dll (ScriptHookVDotNet v2.10.13.0, by )
+	Name: ondemandconnroutehelper.dll; path: C:\WINDOWS\SYSTEM32\ondemandconnroutehelper.dll (Microsoft® Windows® Operating System v10.0.26100.1882, by Microsoft Corporation)
+	Name: DPAPI.DLL; path: C:\WINDOWS\SYSTEM32\DPAPI.DLL (Microsoft® Windows® Operating System v10.0.26100.1, by Microsoft Corporation)
+	Name: schannel.DLL; path: C:\WINDOWS\system32\schannel.DLL (Microsoft® Windows® Operating System v10.0.26100.2308, by Microsoft Corporation)
+	Name: ncryptsslp.dll; path: C:\WINDOWS\system32\ncryptsslp.dll (Microsoft® Windows® Operating System v10.0.26100.5074, by Microsoft Corporation)
+	Name: GTA5.exe
+		Base address: 0x00007ff6e6f90000
+		Memory size: 0x03ff3800
+		Entry point address: 0x00007ff6e87f8d00
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe
+		Product name: Grand Theft Auto V
+		Product version: 1.0.3586.0
+		Company: Rockstar Games
+
+	Name: ntdll.dll
+		Base address: 0x00007ffad6c20000
+		Memory size: 0x00269000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\SYSTEM32\ntdll.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: KERNEL32.DLL
+		Base address: 0x00007ffad6300000
+		Memory size: 0x000c9000
+		Entry point address: 0x00007ffad632e120
+		File path: C:\WINDOWS\System32\KERNEL32.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: KERNELBASE.dll
+		Base address: 0x00007ffad4280000
+		Memory size: 0x003f3000
+		Entry point address: 0x00007ffad4363ff0
+		File path: C:\WINDOWS\System32\KERNELBASE.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: USER32.dll
+		Base address: 0x00007ffad4ee0000
+		Memory size: 0x001c4000
+		Entry point address: 0x00007ffad4f339d0
+		File path: C:\WINDOWS\System32\USER32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: win32u.dll
+		Base address: 0x00007ffad3fa0000
+		Memory size: 0x00027000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\System32\win32u.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: GDI32.dll
+		Base address: 0x00007ffad6200000
+		Memory size: 0x0002b000
+		Entry point address: 0x00007ffad6205ed0
+		File path: C:\WINDOWS\System32\GDI32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: gdi32full.dll
+		Base address: 0x00007ffad3db0000
+		Memory size: 0x0012d000
+		Entry point address: 0x00007ffad3e3a1e0
+		File path: C:\WINDOWS\System32\gdi32full.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: msvcp_win.dll
+		Base address: 0x00007ffad3fd0000
+		Memory size: 0x000a3000
+		Entry point address: 0x00007ffad3ff8460
+		File path: C:\WINDOWS\System32\msvcp_win.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: ucrtbase.dll
+		Base address: 0x00007ffad4680000
+		Memory size: 0x0014b000
+		Entry point address: 0x00007ffad46e3c10
+		File path: C:\WINDOWS\System32\ucrtbase.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: PSAPI.DLL
+		Base address: 0x00007ffad52e0000
+		Memory size: 0x00008000
+		Entry point address: 0x00007ffad52e12b0
+		File path: C:\WINDOWS\System32\PSAPI.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: WS2_32.dll
+		Base address: 0x00007ffad52f0000
+		Memory size: 0x00074000
+		Entry point address: 0x00007ffad5320d40
+		File path: C:\WINDOWS\System32\WS2_32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: RPCRT4.dll
+		Base address: 0x00007ffad5bb0000
+		Memory size: 0x00118000
+		Entry point address: 0x00007ffad5c42300
+		File path: C:\WINDOWS\System32\RPCRT4.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: VERSION.dll
+		Base address: 0x00007fface1f0000
+		Memory size: 0x0000b000
+		Entry point address: 0x00007fface1f1430
+		File path: C:\WINDOWS\SYSTEM32\VERSION.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: DSOUND.dll
+		Base address: 0x00007ffa444c0000
+		Memory size: 0x00094000
+		Entry point address: 0x00007ffa444f92e0
+		File path: C:\WINDOWS\SYSTEM32\DSOUND.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: GFSDK_ShadowLib.win64.dll
+		Base address: 0x00007ffa265a0000
+		Memory size: 0x003cc000
+		Entry point address: 0x00007ffa265acf10
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_ShadowLib.win64.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: CRYPT32.dll
+		Base address: 0x00007ffad4870000
+		Memory size: 0x00177000
+		Entry point address: 0x00007ffad492f100
+		File path: C:\WINDOWS\System32\CRYPT32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: msvcrt.dll
+		Base address: 0x00007ffad5b00000
+		Memory size: 0x000a9000
+		Entry point address: 0x00007ffad5b07a10
+		File path: C:\WINDOWS\System32\msvcrt.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 7.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: advapi32.dll
+		Base address: 0x00007ffad4e20000
+		Memory size: 0x000b4000
+		Entry point address: 0x00007ffad4e41190
+		File path: C:\WINDOWS\System32\advapi32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: WINTRUST.dll
+		Base address: 0x00007ffad4080000
+		Memory size: 0x0007e000
+		Entry point address: 0x00007ffad40b42d0
+		File path: C:\WINDOWS\System32\WINTRUST.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: bink2w64.dll
+		Base address: 0x00007ffa67960000
+		Memory size: 0x0008d000
+		Entry point address: 0x00007ffa67963a78
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\bink2w64.dll
+		Product name: Bink and Smacker
+		Product version: 1.994a
+		Company: RAD Game Tools, Inc.
+
+	Name: sechost.dll
+		Base address: 0x00007ffad6050000
+		Memory size: 0x000a6000
+		Entry point address: 0x00007ffad6079850
+		File path: C:\WINDOWS\System32\sechost.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: ole32.dll
+		Base address: 0x00007ffad5960000
+		Memory size: 0x00198000
+		Entry point address: 0x00007ffad59a6410
+		File path: C:\WINDOWS\System32\ole32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: IMM32.dll
+		Base address: 0x00007ffad50b0000
+		Memory size: 0x0002f000
+		Entry point address: 0x00007ffad50b8f90
+		File path: C:\WINDOWS\System32\IMM32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4484
+		Company: Microsoft Corporation
+
+	Name: combase.dll
+		Base address: 0x00007ffad5cd0000
+		Memory size: 0x0037b000
+		Entry point address: 0x00007ffad5e53a60
+		File path: C:\WINDOWS\System32\combase.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: SHLWAPI.dll
+		Base address: 0x00007ffad6230000
+		Memory size: 0x00062000
+		Entry point address: 0x00007ffad6241680
+		File path: C:\WINDOWS\System32\SHLWAPI.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: SHELL32.dll
+		Base address: 0x00007ffad6490000
+		Memory size: 0x0074d000
+		Entry point address: 0x00007ffad6685ba0
+		File path: C:\WINDOWS\System32\SHELL32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: WININET.dll
+		Base address: 0x00007ffab6e00000
+		Memory size: 0x00289000
+		Entry point address: 0x00007ffab6f492b0
+		File path: C:\WINDOWS\SYSTEM32\WININET.dll
+		Product name: Internet Explorer
+		Product version: 11.00.26100.2308
+		Company: Microsoft Corporation
+
+	Name: WINMM.dll
+		Base address: 0x00007ffacd690000
+		Memory size: 0x00035000
+		Entry point address: 0x00007ffacd69d170
+		File path: C:\WINDOWS\SYSTEM32\WINMM.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: wintypes.dll
+		Base address: 0x00007ffad4110000
+		Memory size: 0x0016c000
+		Entry point address: 0x00007ffad415fc60
+		File path: C:\WINDOWS\System32\wintypes.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: MF.dll
+		Base address: 0x00007ffa9a630000
+		Memory size: 0x00098000
+		Entry point address: 0x00007ffa9a648b40
+		File path: C:\WINDOWS\SYSTEM32\MF.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: OLEAUT32.dll
+		Base address: 0x00007ffad50f0000
+		Memory size: 0x000d7000
+		Entry point address: 0x00007ffad513e270
+		File path: C:\WINDOWS\System32\OLEAUT32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: shcore.dll
+		Base address: 0x00007ffad4a70000
+		Memory size: 0x000f0000
+		Entry point address: 0x00007ffad4ad33b0
+		File path: C:\WINDOWS\System32\shcore.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: MFPlat.DLL
+		Base address: 0x00007ffaa7080000
+		Memory size: 0x00216000
+		Entry point address: 0x00007ffaa71095f0
+		File path: C:\WINDOWS\SYSTEM32\MFPlat.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: msdmo.dll
+		Base address: 0x00007ffa546e0000
+		Memory size: 0x0000e000
+		Entry point address: 0x00007ffa546e33f0
+		File path: C:\WINDOWS\SYSTEM32\msdmo.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: MFReadWrite.dll
+		Base address: 0x00007ffa46810000
+		Memory size: 0x000d6000
+		Entry point address: 0x00007ffa4688a3b0
+		File path: C:\WINDOWS\SYSTEM32\MFReadWrite.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: PROPSYS.dll
+		Base address: 0x00007fface7f0000
+		Memory size: 0x00104000
+		Entry point address: 0x00007fface85f750
+		File path: C:\WINDOWS\SYSTEM32\PROPSYS.dll
+		Product name: Windows® Search
+		Product version: 7.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: ResampleDmo.DLL
+		Base address: 0x00007ffa44400000
+		Memory size: 0x000b1000
+		Entry point address: 0x00007ffa44411090
+		File path: C:\WINDOWS\SYSTEM32\ResampleDmo.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: WTSAPI32.dll
+		Base address: 0x00007ffad09b0000
+		Memory size: 0x0002a000
+		Entry point address: 0x00007ffad09b64f0
+		File path: C:\WINDOWS\SYSTEM32\WTSAPI32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: GFSDK_TXAA_AlphaResolve.win64.dll
+		Base address: 0x00007ffaa2f00000
+		Memory size: 0x0001c000
+		Entry point address: 0x00007ffaa2f0493c
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_TXAA_AlphaResolve.win64.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: d3d9.dll
+		Base address: 0x00007ffa98c30000
+		Memory size: 0x001b1000
+		Entry point address: 0x00007ffa98cd7470
+		File path: C:\WINDOWS\SYSTEM32\d3d9.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: powrprof.dll
+		Base address: 0x00007ffad3a80000
+		Memory size: 0x0005e000
+		Entry point address: 0x00007ffad3a8a370
+		File path: C:\WINDOWS\SYSTEM32\powrprof.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4202
+		Company: Microsoft Corporation
+
+	Name: DINPUT8.dll
+		Base address: 0x00007ffa94c60000
+		Memory size: 0x00025000
+		Entry point address: 0x00007ffa94c63804
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\DINPUT8.dll
+		Product name: GTA V Asi loader
+		Product version: 1.0.0.1
+		Company: Alexander Blade
+
+	Name: XINPUT1_4.dll
+		Base address: 0x00007ffab3b50000
+		Memory size: 0x0000d000
+		Entry point address: 0x00007ffab3b565f0
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\XINPUT1_4.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 6.2.9200.16384
+		Company: Microsoft Corporation
+
+	Name: D3DCOMPILER_43.dll
+		Base address: 0x00007ffa256e0000
+		Memory size: 0x0026f000
+		Entry point address: 0x00007ffa2591be5c
+		File path: C:\WINDOWS\SYSTEM32\D3DCOMPILER_43.dll
+		Product name: Microsoft® DirectX for Windows®
+		Product version: 9.29.952.3111
+		Company: Microsoft Corporation
+
+	Name: bcrypt.dll
+		Base address: 0x00007ffad3ca0000
+		Memory size: 0x00026000
+		Entry point address: 0x00007ffad3cb05b0
+		File path: C:\WINDOWS\SYSTEM32\bcrypt.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: IPHLPAPI.DLL
+		Base address: 0x00007ffad2550000
+		Memory size: 0x00034000
+		Entry point address: 0x00007ffad25691f0
+		File path: C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: winmmbase.dll
+		Base address: 0x00007ffab6c10000
+		Memory size: 0x00031000
+		Entry point address: 0x00007ffab6c216e0
+		File path: C:\WINDOWS\SYSTEM32\winmmbase.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: d3dx9_43.dll
+		Base address: 0x00007ffa24e50000
+		Memory size: 0x00263000
+		Entry point address: 0x00007ffa25065d1c
+		File path: C:\WINDOWS\SYSTEM32\d3dx9_43.dll
+		Product name: Microsoft® DirectX for Windows®
+		Product version: 9.29.952.3111
+		Company: Microsoft Corporation
+
+	Name: cfgmgr32.dll
+		Base address: 0x00007ffad39b0000
+		Memory size: 0x00057000
+		Entry point address: 0x00007ffad39d61e0
+		File path: C:\WINDOWS\SYSTEM32\cfgmgr32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4202
+		Company: Microsoft Corporation
+
+	Name: SspiCli.dll
+		Base address: 0x00007ffad2e00000
+		Memory size: 0x00049000
+		Entry point address: 0x00007ffad2e0eb90
+		File path: C:\WINDOWS\SYSTEM32\SspiCli.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: OPENGL32.dll
+		Base address: 0x00007ffa5d3e0000
+		Memory size: 0x0010c000
+		Entry point address: 0x00007ffa5d43bdf0
+		File path: C:\WINDOWS\SYSTEM32\OPENGL32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: dwmapi.dll
+		Base address: 0x00007ffad1070000
+		Memory size: 0x0002b000
+		Entry point address: 0x00007ffad107ac50
+		File path: C:\WINDOWS\SYSTEM32\dwmapi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: DEVOBJ.dll
+		Base address: 0x00007ffad3980000
+		Memory size: 0x0002d000
+		Entry point address: 0x00007ffad3995c20
+		File path: C:\WINDOWS\SYSTEM32\DEVOBJ.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: dxcore.dll
+		Base address: 0x00007ffad0cc0000
+		Memory size: 0x00044000
+		Entry point address: 0x00007ffad0cc27e0
+		File path: C:\WINDOWS\SYSTEM32\dxcore.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: GLU32.dll
+		Base address: 0x00007ffab54d0000
+		Memory size: 0x0002d000
+		Entry point address: 0x00007ffab54d12e0
+		File path: C:\WINDOWS\SYSTEM32\GLU32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: MFCORE.DLL
+		Base address: 0x00007ffa463f0000
+		Memory size: 0x0041b000
+		Entry point address: 0x00007ffa4642e5a0
+		File path: C:\WINDOWS\SYSTEM32\MFCORE.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: UMPDC.dll
+		Base address: 0x00007ffad3a60000
+		Memory size: 0x00014000
+		Entry point address: 0x00007ffad3a68280
+		File path: C:\WINDOWS\SYSTEM32\UMPDC.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1301
+		Company: Microsoft Corporation
+
+	Name: bcryptPrimitives.dll
+		Base address: 0x00007ffad47d0000
+		Memory size: 0x00099000
+		Entry point address: 0x00007ffad48002e0
+		File path: C:\WINDOWS\System32\bcryptPrimitives.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: RTWorkQ.DLL
+		Base address: 0x00007ffab5360000
+		Memory size: 0x0003e000
+		Entry point address: 0x00007ffab53711b0
+		File path: C:\WINDOWS\SYSTEM32\RTWorkQ.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.3912
+		Company: Microsoft Corporation
+
+	Name: MSASN1.dll
+		Base address: 0x00007ffad34e0000
+		Memory size: 0x00013000
+		Entry point address: 0x00007ffad34e9520
+		File path: C:\WINDOWS\SYSTEM32\MSASN1.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: dinput8.dll
+		Base address: 0x00007ffa9ae80000
+		Memory size: 0x0004b000
+		Entry point address: 0x00007ffa9ae9bb60
+		File path: C:\WINDOWS\system32\dinput8.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: gameoverlayrenderer64.dll
+		Base address: 0x00007ffa679f0000
+		Memory size: 0x001ab000
+		Entry point address: 0x00007ffa67ac4430
+		File path: C:\Program Files (x86)\Steam\gameoverlayrenderer64.dll
+		Product name: Steam Game Overlay Renderer
+		Product version: 01.00.00.01
+		Company: Valve Corporation
+
+	Name: inputhost.dll
+		Base address: 0x00007ffaaddf0000
+		Memory size: 0x001da000
+		Entry point address: 0x00007ffaade53910
+		File path: C:\WINDOWS\SYSTEM32\inputhost.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: CoreMessaging.dll
+		Base address: 0x00007ffad0270000
+		Memory size: 0x00125000
+		Entry point address: 0x00007ffad0302ce0
+		File path: C:\WINDOWS\SYSTEM32\CoreMessaging.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4202
+		Company: Microsoft Corporation
+
+	Name: CRYPTBASE.DLL
+		Base address: 0x00007ffad33b0000
+		Memory size: 0x0000c000
+		Entry point address: 0x00007ffad33b11e0
+		File path: C:\WINDOWS\SYSTEM32\CRYPTBASE.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: HeapAdjuster.asi
+		Base address: 0x00007ffa94c20000
+		Memory size: 0x0003e000
+		Entry point address: 0x00007ffa94c27038
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\HeapAdjuster.asi
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: Menyoo.asi
+		Base address: 0x00007ffa24b10000
+		Memory size: 0x0033c000
+		Entry point address: 0x00007ffa24d4ab50
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Menyoo.asi
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: ScriptHookV.dll
+		Base address: 0x00007ffa37240000
+		Memory size: 0x001ef000
+		Entry point address: 0x00007ffa37255ca8
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookV.dll
+		Product name: ScriptHookV
+		Product version: 3586.0.889.22
+		Company: Alexander Blade
+
+	Name: d3dx11_43.dll
+		Base address: 0x00007ffa93dc0000
+		Memory size: 0x00046000
+		Entry point address: 0x00007ffa93df7a2c
+		File path: C:\WINDOWS\SYSTEM32\d3dx11_43.dll
+		Product name: Microsoft® DirectX for Windows®
+		Product version: 9.29.952.3111
+		Company: Microsoft Corporation
+
+	Name: NativeTrainer.asi
+		Base address: 0x00007ffa90630000
+		Memory size: 0x0003c000
+		Entry point address: 0x00007ffa9063c42c
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\NativeTrainer.asi
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: openCameraV.asi
+		Base address: 0x00007ffa90500000
+		Memory size: 0x00024000
+		Entry point address: 0x00007ffa90502994
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\openCameraV.asi
+		Product name: openCamera for GTAV
+		Product version: 1.0.0.1
+		Company: OpenIV Dev. Team
+
+	Name: OpenIV.asi
+		Base address: 0x00007ffa8e2e0000
+		Memory size: 0x00027000
+		Entry point address: 0x00007ffa8e2e2cdc
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\OpenIV.asi
+		Product name: OpenIV
+		Product version: 2.0.0.0
+		Company: OpenIV Team
+
+	Name: PackfileLimitAdjuster.asi
+		Base address: 0x00007ffa70660000
+		Memory size: 0x00052000
+		Entry point address: 0x00007ffa70672530
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\PackfileLimitAdjuster.asi
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: ScriptHookVDotNet.asi
+		Base address: 0x00007ffa8e2b0000
+		Memory size: 0x0002c000
+		Entry point address: 0x00007ffa8e2bcf62
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet.asi
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: VCRUNTIME140.dll
+		Base address: 0x00007ffab6d90000
+		Memory size: 0x0001e000
+		Entry point address: 0x00007ffab6da0390
+		File path: C:\WINDOWS\SYSTEM32\VCRUNTIME140.dll
+		Product name: Microsoft® Visual Studio®
+		Product version: 14.44.35211.0
+		Company: Microsoft Corporation
+
+	Name: mscoree.dll
+		Base address: 0x00007ffacd240000
+		Memory size: 0x0006d000
+		Entry point address: 0x00007ffacd249780
+		File path: C:\WINDOWS\SYSTEM32\mscoree.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.3624
+		Company: Microsoft Corporation
+
+	Name: mscoreei.dll
+		Base address: 0x00007ffacd0e0000
+		Memory size: 0x0009b000
+		Entry point address: 0x00007ffacd0ebf90
+		File path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\mscoreei.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9065.0
+		Company: Microsoft Corporation
+
+	Name: kernel.appcore.dll
+		Base address: 0x00007ffad2b50000
+		Memory size: 0x0001b000
+		Entry point address: 0x00007ffad2b55640
+		File path: C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: VStancer.asi
+		Base address: 0x00007ffa43c80000
+		Memory size: 0x000ed000
+		Entry point address: 0x00007ffa43ce37c4
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\VStancer.asi
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: windows.storage.dll
+		Base address: 0x00007ffad19f0000
+		Memory size: 0x00859000
+		Entry point address: 0x00007ffad1d543d0
+		File path: C:\WINDOWS\SYSTEM32\windows.storage.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: sdk_legacy_led_x64.dll
+		Base address: 0x00007ffa24720000
+		Memory size: 0x003e7000
+		Entry point address: 0x00007ffa24990784
+		File path: C:\Program Files\LGHUB\sdks\sdk_legacy_led_x64.dll
+		Product name: Logitech G Legacy LED SDK
+		Product version: 9.2.65
+		Company: Logitech, Inc.
+
+	Name: MSVCP140.dll
+		Base address: 0x00007ffab6690000
+		Memory size: 0x00089000
+		Entry point address: 0x00007ffab66ddab0
+		File path: C:\WINDOWS\SYSTEM32\MSVCP140.dll
+		Product name: Microsoft® Visual Studio®
+		Product version: 14.44.35211.0
+		Company: Microsoft Corporation
+
+	Name: VCRUNTIME140_1.dll
+		Base address: 0x00007ffab6db0000
+		Memory size: 0x0000c000
+		Entry point address: 0x00007ffab6db4110
+		File path: C:\WINDOWS\SYSTEM32\VCRUNTIME140_1.dll
+		Product name: Microsoft® Visual Studio®
+		Product version: 14.44.35211.0
+		Company: Microsoft Corporation
+
+	Name: mswsock.dll
+		Base address: 0x00007ffad30c0000
+		Memory size: 0x0006b000
+		Entry point address: 0x00007ffad30e3360
+		File path: C:\WINDOWS\system32\mswsock.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: dbghelp.dll
+		Base address: 0x00007ffad1410000
+		Memory size: 0x00242000
+		Entry point address: 0x00007ffad1442bf0
+		File path: C:\WINDOWS\SYSTEM32\dbghelp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: dbgcore.DLL
+		Base address: 0x00007ffaa4d60000
+		Memory size: 0x0003d000
+		Entry point address: 0x00007ffaa4d61820
+		File path: C:\WINDOWS\SYSTEM32\dbgcore.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: d3d12.dll
+		Base address: 0x00007ffa74db0000
+		Memory size: 0x00023000
+		Entry point address: 0x00007ffa74dbb310
+		File path: C:\WINDOWS\SYSTEM32\d3d12.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: CRYPTSP.dll
+		Base address: 0x00007ffad3390000
+		Memory size: 0x0001b000
+		Entry point address: 0x00007ffad33989e0
+		File path: C:\WINDOWS\SYSTEM32\CRYPTSP.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: rsaenh.dll
+		Base address: 0x00007ffad2ab0000
+		Memory size: 0x0003b000
+		Entry point address: 0x00007ffad2ad1e30
+		File path: C:\WINDOWS\system32\rsaenh.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: uxtheme.dll
+		Base address: 0x00007ffad0bc0000
+		Memory size: 0x000a8000
+		Entry point address: 0x00007ffad0c0fe30
+		File path: C:\WINDOWS\system32\uxtheme.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: clbcatq.dll
+		Base address: 0x00007ffad63d0000
+		Memory size: 0x000b1000
+		Entry point address: 0x00007ffad63f2a10
+		File path: C:\WINDOWS\System32\clbcatq.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: dxdiagn.dll
+		Base address: 0x00007ffa5cca0000
+		Memory size: 0x00073000
+		Entry point address: 0x00007ffa5cca1a80
+		File path: C:\Windows\System32\dxdiagn.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: d3d11.dll
+		Base address: 0x00007ffacfcf0000
+		Memory size: 0x00260000
+		Entry point address: 0x00007ffacfd97e60
+		File path: C:\Windows\System32\d3d11.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: WMICLNT.dll
+		Base address: 0x00007fface3e0000
+		Memory size: 0x00013000
+		Entry point address: 0x00007fface3e68d0
+		File path: C:\Windows\System32\WMICLNT.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: dxgi.dll
+		Base address: 0x00007ffad0e10000
+		Memory size: 0x0013a000
+		Entry point address: 0x00007ffad0e7d7e0
+		File path: C:\Windows\System32\dxgi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: imagehlp.dll
+		Base address: 0x00007ffad6110000
+		Memory size: 0x00020000
+		Entry point address: 0x00007ffad6114f60
+		File path: C:\WINDOWS\System32\imagehlp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4202
+		Company: Microsoft Corporation
+
+	Name: wbemprox.dll
+		Base address: 0x00007ffab4c00000
+		Memory size: 0x00012000
+		Entry point address: 0x00007ffab4c06510
+		File path: C:\WINDOWS\system32\wbem\wbemprox.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: wbemcomn.dll
+		Base address: 0x00007ffab65e0000
+		Memory size: 0x0007a000
+		Entry point address: 0x00007ffab660e330
+		File path: C:\WINDOWS\SYSTEM32\wbemcomn.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: wbemsvc.dll
+		Base address: 0x00007ffab3100000
+		Memory size: 0x00015000
+		Entry point address: 0x00007ffab3101800
+		File path: C:\WINDOWS\system32\wbem\wbemsvc.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: fastprox.dll
+		Base address: 0x00007ffab3810000
+		Memory size: 0x000f0000
+		Entry point address: 0x00007ffab3886000
+		File path: C:\WINDOWS\system32\wbem\fastprox.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: amsi.dll
+		Base address: 0x00007ffab3b60000
+		Memory size: 0x0001d000
+		Entry point address: 0x00007ffab3b694d0
+		File path: C:\WINDOWS\SYSTEM32\amsi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: USERENV.dll
+		Base address: 0x00007ffad3160000
+		Memory size: 0x0002b000
+		Entry point address: 0x00007ffad316df50
+		File path: C:\WINDOWS\SYSTEM32\USERENV.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: profapi.dll
+		Base address: 0x00007ffad3cd0000
+		Memory size: 0x00029000
+		Entry point address: 0x00007ffad3cdf390
+		File path: C:\WINDOWS\SYSTEM32\profapi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: MpOav.dll
+		Base address: 0x00007ffab0a90000
+		Memory size: 0x000a0000
+		Entry point address: 0x00007ffab0ab9ac0
+		File path: C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25070.5-0\MpOav.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 4.18.25070.5
+		Company: Microsoft Corporation
+
+	Name: setupapi.dll
+		Base address: 0x00007ffad5370000
+		Memory size: 0x00487000
+		Entry point address: 0x00007ffad53bd800
+		File path: C:\WINDOWS\System32\setupapi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: gpapi.dll
+		Base address: 0x00007ffad3130000
+		Memory size: 0x00027000
+		Entry point address: 0x00007ffad313e050
+		File path: C:\WINDOWS\SYSTEM32\gpapi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: cryptnet.dll
+		Base address: 0x00007ffacbff0000
+		Memory size: 0x0003b000
+		Entry point address: 0x00007ffacc00cff0
+		File path: C:\Windows\System32\cryptnet.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.3624
+		Company: Microsoft Corporation
+
+	Name: WINNSI.DLL
+		Base address: 0x00007ffad0b50000
+		Memory size: 0x0000f000
+		Entry point address: 0x00007ffad0b52c70
+		File path: C:\WINDOWS\SYSTEM32\WINNSI.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: NSI.dll
+		Base address: 0x00007ffad52d0000
+		Memory size: 0x0000a000
+		Entry point address: 0x00007ffad52d27f0
+		File path: C:\WINDOWS\System32\NSI.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: directxdatabasehelper.dll
+		Base address: 0x00007ffacdfc0000
+		Memory size: 0x00060000
+		Entry point address: 0x00007ffacdfc2240
+		File path: C:\WINDOWS\SYSTEM32\directxdatabasehelper.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: windows.staterepositorycore.dll
+		Base address: 0x00007ffab94e0000
+		Memory size: 0x0001a000
+		Entry point address: 0x00007ffab94e1e60
+		File path: C:\WINDOWS\SYSTEM32\windows.staterepositorycore.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: steam_api64.dll
+		Base address: 0x000000006fed0000
+		Memory size: 0x0003f000
+		Entry point address: 0x000000006fedac48
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\steam_api64.dll
+		Product name: Steam Client API
+		Product version: 01.00.00.01
+		Company: Valve Corporation
+
+	Name: steamclient64.dll
+		Base address: 0x00007ff9f0fd0000
+		Memory size: 0x0177d000
+		Entry point address: 0x00007ff9f1e56fac
+		File path: C:\Program Files (x86)\Steam\steamclient64.dll
+		Product name: Steam
+		Product version: 03.00.00.01
+		Company: Valve Corporation
+
+	Name: vstdlib_s64.dll
+		Base address: 0x00007ffa664c0000
+		Memory size: 0x000c1000
+		Entry point address: 0x00007ffa664ebc00
+		File path: C:\Program Files (x86)\Steam\vstdlib_s64.dll
+		Product name: Steam
+		Product version: 03.00.00.01
+		Company: Valve Corporation
+
+	Name: Secur32.dll
+		Base address: 0x00007ffad0970000
+		Memory size: 0x0000d000
+		Entry point address: 0x00007ffad0971010
+		File path: C:\WINDOWS\SYSTEM32\Secur32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: tier0_s64.dll
+		Base address: 0x00007ffa5e670000
+		Memory size: 0x0019c000
+		Entry point address: 0x00007ffa5e691580
+		File path: C:\Program Files (x86)\Steam\tier0_s64.dll
+		Product name:  tier0_s Dynamic Link Library
+		Product version: 01.00.00.01
+		Company: Valve Corporation
+
+	Name: nvapi64.dll
+		Base address: 0x00007ffabcea0000
+		Memory size: 0x00585000
+		Entry point address: 0x00007ffabd293de0
+		File path: C:\WINDOWS\system32\nvapi64.dll
+		Product name: NVIDIA Windows drivers
+		Product version: 32.0.15.8115
+		Company: NVIDIA Corporation
+
+	Name: wldp.dll
+		Base address: 0x00007ffad3470000
+		Memory size: 0x00064000
+		Entry point address: 0x00007ffad34945b0
+		File path: C:\WINDOWS\SYSTEM32\wldp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: drvstore.dll
+		Base address: 0x00007ffacbde0000
+		Memory size: 0x00175000
+		Entry point address: 0x00007ffacbe7f9e0
+		File path: C:\WINDOWS\SYSTEM32\drvstore.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: D3D10_1.DLL
+		Base address: 0x00007ffa72e90000
+		Memory size: 0x00034000
+		Entry point address: 0x00007ffa72e965f0
+		File path: C:\WINDOWS\SYSTEM32\D3D10_1.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: d3d10_1core.dll
+		Base address: 0x00007ffaa0d60000
+		Memory size: 0x0000e000
+		Entry point address: 0x00007ffaa0d61b70
+		File path: C:\WINDOWS\SYSTEM32\d3d10_1core.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: nvspcap64.dll
+		Base address: 0x00007ffa72f20000
+		Memory size: 0x00147000
+		Entry point address: 0x00007ffa72f21195
+		File path: C:\WINDOWS\system32\nvspcap64.dll
+		Product name: NVIDIA App
+		Product version: 11.0.5.245
+		Company: NVIDIA Corporation
+
+	Name: ntmarta.dll
+		Base address: 0x00007ffad2c70000
+		Memory size: 0x00036000
+		Entry point address: 0x00007ffad2c7fbd0
+		File path: C:\WINDOWS\SYSTEM32\ntmarta.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: MSCTF.dll
+		Base address: 0x00007ffad5800000
+		Memory size: 0x00158000
+		Entry point address: 0x00007ffad588e420
+		File path: C:\WINDOWS\System32\MSCTF.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: textinputframework.dll
+		Base address: 0x00007ffaae770000
+		Memory size: 0x00149000
+		Entry point address: 0x00007ffaae7fd600
+		File path: C:\WINDOWS\SYSTEM32\textinputframework.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: CoreUIComponents.dll
+		Base address: 0x000001697e690000
+		Memory size: 0x002e3000
+		Entry point address: 0x000001697e73eb10
+		File path: C:\WINDOWS\SYSTEM32\CoreUIComponents.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: WINSTA.dll
+		Base address: 0x00007ffad3910000
+		Memory size: 0x00063000
+		Entry point address: 0x00007ffad3931570
+		File path: C:\WINDOWS\SYSTEM32\WINSTA.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: nvldumdx.dll
+		Base address: 0x00007ffacc120000
+		Memory size: 0x000c4000
+		Entry point address: 0x00007ffacc156910
+		File path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvldumdx.dll
+		Product name: NVIDIA driver loader
+		Product version: 32.0.15.8115
+		Company: NVIDIA Corporation
+
+	Name: nvgpucomp64.dll
+		Base address: 0x00007ffac8020000
+		Memory size: 0x03d93000
+		Entry point address: 0x00007ffac8215a1c
+		File path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvgpucomp64.dll
+		Product name: NVIDIA GPU Compiler Driver
+		Product version: 32.0.15.8115
+		Company: NVIDIA Corporation
+
+	Name: NvMessageBus.dll
+		Base address: 0x00007ffabab70000
+		Memory size: 0x00363000
+		Entry point address: 0x00007ffabad8b270
+		File path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\Display.NvContainer\NvMessageBus.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: NvMemMapStoragex.dll
+		Base address: 0x00007ffac63d0000
+		Memory size: 0x000de000
+		Entry point address: 0x00007ffac6400b28
+		File path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\NvMemMapStoragex.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: ShadowLibx64.dll
+		Base address: 0x00007ffa22f40000
+		Memory size: 0x017d5000
+		Entry point address: 0x00007ffa2470f000
+		File path: C:\Users\amata\AppData\Local\Temp\smgf00vfbvn0z1id\ShadowLibx64.dll
+		Product name: RAGE Plugin Hook
+		Product version: 1.122.1379.17094
+		Company: MulleDK19 / LMS
+
+	Name: FW1FontWrapper.dll
+		Base address: 0x00007ffa734e0000
+		Memory size: 0x0002a000
+		Entry point address: 0x00007ffa734ee94c
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\FW1FontWrapper.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: XINPUT9_1_0.dll
+		Base address: 0x00007ffacff60000
+		Memory size: 0x00009000
+		Entry point address: 0x00007ffacff61290
+		File path: C:\WINDOWS\SYSTEM32\XINPUT9_1_0.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: nvwgf2umx.dll
+		Base address: 0x00007ffabf180000
+		Memory size: 0x05834000
+		Entry point address: 0x00007ffabf2450d0
+		File path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvwgf2umx.dll
+		Product name: NVIDIA D3D10 drivers
+		Product version: 32.0.15.8115
+		Company: NVIDIA Corporation
+
+	Name: DispBroker.Desktop.dll
+		Base address: 0x00007ffabb880000
+		Memory size: 0x000f2000
+		Entry point address: 0x00007ffabb8aef30
+		File path: C:\Windows\System32\DispBroker.Desktop.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: clr.dll
+		Base address: 0x00007ffab7380000
+		Memory size: 0x009a4000
+		Entry point address: 0x00007ffab7511dd0
+		File path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clr.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9310.0
+		Company: Microsoft Corporation
+
+	Name: VCRUNTIME140_1_CLR0400.dll
+		Base address: 0x00007ffab5c20000
+		Memory size: 0x0000c000
+		Entry point address: 0x00007ffab5c241a0
+		File path: C:\WINDOWS\SYSTEM32\VCRUNTIME140_1_CLR0400.dll
+		Product name: Microsoft® Visual Studio®
+		Product version: 14.32.31326.0
+		Company: Microsoft Corporation
+
+	Name: VCRUNTIME140_CLR0400.dll
+		Base address: 0x00007ffab5e90000
+		Memory size: 0x0001b000
+		Entry point address: 0x00007ffab5e9fe90
+		File path: C:\WINDOWS\SYSTEM32\VCRUNTIME140_CLR0400.dll
+		Product name: Microsoft® Visual Studio®
+		Product version: 14.32.31326.0
+		Company: Microsoft Corporation
+
+	Name: ucrtbase_clr0400.dll
+		Base address: 0x00007ffab5c30000
+		Memory size: 0x000cd000
+		Entry point address: 0x00007ffab5cc3b60
+		File path: C:\WINDOWS\SYSTEM32\ucrtbase_clr0400.dll
+		Product name: Microsoft® Visual Studio®
+		Product version: 14.32.31326.0
+		Company: Microsoft Corporation
+
+	Name: mscorlib.ni.dll
+		Base address: 0x00007ffab1af0000
+		Memory size: 0x0160f000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\mscorlib\8967064a93c70884749ad00de74dd7a1\mscorlib.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9310.0
+		Company: Microsoft Corporation
+
+	Name: clrjit.dll
+		Base address: 0x00007ffab3b80000
+		Memory size: 0x0012f000
+		Entry point address: 0x00007ffab3c16620
+		File path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\clrjit.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9310.0
+		Company: Microsoft Corporation
+
+	Name: diasymreader.dll
+		Base address: 0x00007ffa3b7d0000
+		Memory size: 0x00141000
+		Entry point address: 0x00007ffa3b802e80
+		File path: C:\Windows\Microsoft.NET\Framework64\v4.0.30319\diasymreader.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 14.8.9294.0
+		Company: Microsoft Corporation
+
+	Name: nvppex.dll
+		Base address: 0x00007ffa70990000
+		Memory size: 0x001b7000
+		Entry point address: 0x00007ffa709e4cc4
+		File path: C:\WINDOWS\System32\DriverStore\FileRepository\nv_dispi.inf_amd64_3496fbfac7a2d1ba\nvppex.dll
+		Product name: NVIDIA driver loader
+		Product version: 32.0.15.8115
+		Company: NVIDIA Corporation
+
+	Name: System.ni.dll
+		Base address: 0x00007ffaae8c0000
+		Memory size: 0x00c22000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System\fc7509f3c5d3bef48dfefcb3947d3b56\System.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9310.0
+		Company: Microsoft Corporation
+
+	Name: System.Drawing.ni.dll
+		Base address: 0x00007ffa9e510000
+		Memory size: 0x001f3000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Drawing\f8bbe472ae72b0b981525825470239b1\System.Drawing.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9032.0
+		Company: Microsoft Corporation
+
+	Name: System.Windows.Forms.ni.dll
+		Base address: 0x00007ffa9d420000
+		Memory size: 0x010ed000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Windows.Forms\af74927d580d9bb054e920236bc5e749\System.Windows.Forms.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9256.0
+		Company: Microsoft Corporation
+
+	Name: dcomp.dll
+		Base address: 0x00007ffad0040000
+		Memory size: 0x00223000
+		Entry point address: 0x00007ffad00f1930
+		File path: C:\WINDOWS\SYSTEM32\dcomp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: Microsoft.Internal.WarpPal.dll
+		Base address: 0x00007ffaced30000
+		Memory size: 0x00019000
+		Entry point address: 0x00007ffaced31510
+		File path: C:\Windows\System32\Microsoft.Internal.WarpPal.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: OneCoreCommonProxyStub.dll
+		Base address: 0x00007ffaa8140000
+		Memory size: 0x000bd000
+		Entry point address: 0x00007ffaa81415d0
+		File path: C:\Windows\System32\OneCoreCommonProxyStub.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: OneCoreUAPCommonProxyStub.dll
+		Base address: 0x00007ffabaee0000
+		Memory size: 0x0064c000
+		Entry point address: 0x00007ffabaee40a0
+		File path: C:\Windows\System32\OneCoreUAPCommonProxyStub.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: HID.DLL
+		Base address: 0x00007ffad2250000
+		Memory size: 0x0000f000
+		Entry point address: 0x00007ffad22551f0
+		File path: C:\WINDOWS\SYSTEM32\HID.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: System.Core.ni.dll
+		Base address: 0x00007ffaabef0000
+		Memory size: 0x00a85000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Core\e9e4f53a0f05c9165f9166283afc3394\System.Core.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9316.0
+		Company: Microsoft Corporation
+
+	Name: System.Xml.ni.dll
+		Base address: 0x00007ffaa9090000
+		Memory size: 0x008b1000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Xml\712338b74f96d32fc2d4d8d3c14667d5\System.Xml.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9032.0
+		Company: Microsoft Corporation
+
+	Name: MMDevApi.dll
+		Base address: 0x00007ffabbab0000
+		Memory size: 0x00099000
+		Entry point address: 0x00007ffabbaf7420
+		File path: C:\WINDOWS\System32\MMDevApi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: System.Configuration.ni.dll
+		Base address: 0x00007ffaa9950000
+		Memory size: 0x00133000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\assembly\NativeImages_v4.0.30319_64\System.Configuration\644bd477844b170a810da57275ca6ea3\System.Configuration.ni.dll
+		Product name: Microsoft® .NET Framework
+		Product version: 4.8.9032.0
+		Company: Microsoft Corporation
+
+	Name: XAudio2_7.dll
+		Base address: 0x00007ffa3bb40000
+		Memory size: 0x0008b000
+		Entry point address: 0x00007ffa3bbb0650
+		File path: C:\WINDOWS\system32\XAudio2_7.dll
+		Product name: Microsoft® DirectX for Windows®
+		Product version: 9.29.1962.0
+		Company: Microsoft Corporation
+
+	Name: comctl32.dll
+		Base address: 0x00007ffab5eb0000
+		Memory size: 0x00293000
+		Entry point address: 0x00007ffab5fc5970
+		File path: C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.26100.5074_none_3e0d6f78e32fd63f\comctl32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1591
+		Company: Microsoft Corporation
+
+	Name: AUDIOSES.DLL
+		Base address: 0x00007ffab9b10000
+		Memory size: 0x001bb000
+		Entry point address: 0x00007ffab9b89200
+		File path: C:\WINDOWS\SYSTEM32\AUDIOSES.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: resourcepolicyclient.dll
+		Base address: 0x00007ffad10e0000
+		Memory size: 0x00014000
+		Entry point address: 0x00007ffad10e1330
+		File path: C:\WINDOWS\SYSTEM32\resourcepolicyclient.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: gdiplus.dll
+		Base address: 0x00007ffab9200000
+		Memory size: 0x001d8000
+		Entry point address: 0x00007ffab92e9330
+		File path: C:\WINDOWS\WinSxS\amd64_microsoft.windows.gdiplus_6595b64144ccf1df_1.1.26100.5074_none_6ef8625e3dc2500d\gdiplus.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: DWrite.dll
+		Base address: 0x00007ffacf420000
+		Memory size: 0x00267000
+		Entry point address: 0x00007ffacf52d880
+		File path: C:\WINDOWS\SYSTEM32\DWrite.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: WindowsCodecs.dll
+		Base address: 0x00007ffaced50000
+		Memory size: 0x0022f000
+		Entry point address: 0x00007ffacee13e30
+		File path: C:\WINDOWS\SYSTEM32\WindowsCodecs.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: Windows.UI.dll
+		Base address: 0x00007ffab6720000
+		Memory size: 0x00150000
+		Entry point address: 0x00007ffab677d360
+		File path: C:\Windows\System32\Windows.UI.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: avrt.dll
+		Base address: 0x00007ffacd9e0000
+		Memory size: 0x0000b000
+		Entry point address: 0x00007ffacd9e1ca0
+		File path: C:\WINDOWS\SYSTEM32\avrt.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: TextShaping.dll
+		Base address: 0x00007ffaa8cf0000
+		Memory size: 0x000b3000
+		Entry point address: 0x00007ffaa8d24160
+		File path: C:\WINDOWS\SYSTEM32\TextShaping.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4343
+		Company: Microsoft Corporation
+
+	Name: napinsp.dll
+		Base address: 0x00007ffaccd80000
+		Memory size: 0x00018000
+		Entry point address: 0x00007ffaccd84af0
+		File path: C:\WINDOWS\system32\napinsp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: DNSAPI.dll
+		Base address: 0x00007ffad2640000
+		Memory size: 0x00126000
+		Entry point address: 0x00007ffad26ca7d0
+		File path: C:\WINDOWS\SYSTEM32\DNSAPI.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: winrnr.dll
+		Base address: 0x00007ffacc320000
+		Memory size: 0x00012000
+		Entry point address: 0x00007ffacc322520
+		File path: C:\WINDOWS\System32\winrnr.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: nlansp_c.dll
+		Base address: 0x00007ffacc260000
+		Memory size: 0x00028000
+		Entry point address: 0x00007ffacc262110
+		File path: C:\WINDOWS\system32\nlansp_c.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: wshbth.dll
+		Base address: 0x00007ffacc210000
+		Memory size: 0x00016000
+		Entry point address: 0x00007ffacc2113c0
+		File path: C:\WINDOWS\system32\wshbth.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: fwpuclnt.dll
+		Base address: 0x00007ffacbf60000
+		Memory size: 0x00086000
+		Entry point address: 0x00007ffacbf70fc0
+		File path: C:\WINDOWS\System32\fwpuclnt.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.3915
+		Company: Microsoft Corporation
+
+	Name: rasadhlp.dll
+		Base address: 0x00007ffaba8e0000
+		Memory size: 0x0000b000
+		Entry point address: 0x00007ffaba8e1aa0
+		File path: C:\Windows\System32\rasadhlp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: socialclub.dll
+		Base address: 0x00007ffa36840000
+		Memory size: 0x005bd000
+		Entry point address: 0x00007ffa36ab149c
+		File path: C:\Program Files\Rockstar Games\Social Club\socialclub.dll
+		Product name: Social Club
+		Product version: 2.4.0.101
+		Company: Take-Two Interactive Software, Inc.
+
+	Name: chrome_elf.dll
+		Base address: 0x00007ffa93e10000
+		Memory size: 0x00150000
+		Entry point address: 0x00007ffa93ebab70
+		File path: C:\Program Files\Rockstar Games\Social Club\chrome_elf.dll
+		Product name: Chromium
+		Product version: 109.0.5414.120
+		Company: The Chromium Authors
+
+	Name: libcef.dll
+		Base address: 0x00007ffa27c00000
+		Memory size: 0x0b05b000
+		Entry point address: 0x00007ffa30ba3d00
+		File path: C:\Program Files\Rockstar Games\Social Club\libcef.dll
+		Product name: Chromium Embedded Framework (CEF) Dynamic Link Library
+		Product version: 109.1.18+ge5dd31c+chromium-109.0.5414.120
+		Company: 
+
+	Name: COMDLG32.dll
+		Base address: 0x00007ffad51d0000
+		Memory size: 0x000f1000
+		Entry point address: 0x00007ffad5215b00
+		File path: C:\WINDOWS\System32\COMDLG32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: COMCTL32.dll
+		Base address: 0x00007ffaae4c0000
+		Memory size: 0x000b4000
+		Entry point address: 0x00007ffaae4c1770
+		File path: C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_5.82.26100.5074_none_87eb64a37a300c6e\COMCTL32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1591
+		Company: Microsoft Corporation
+
+	Name: UIAutomationCore.DLL
+		Base address: 0x00007ffab3f40000
+		Memory size: 0x00419000
+		Entry point address: 0x00007ffab40ce980
+		File path: C:\WINDOWS\SYSTEM32\UIAutomationCore.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: NETAPI32.dll
+		Base address: 0x00007ffab8530000
+		Memory size: 0x0001a000
+		Entry point address: 0x00007ffab85315f0
+		File path: C:\WINDOWS\SYSTEM32\NETAPI32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: WINHTTP.dll
+		Base address: 0x00007ffaccdc0000
+		Memory size: 0x0011f000
+		Entry point address: 0x00007ffacce61030
+		File path: C:\WINDOWS\SYSTEM32\WINHTTP.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: WINSPOOL.DRV
+		Base address: 0x00007ffab31f0000
+		Memory size: 0x000b2000
+		Entry point address: 0x00007ffab3211570
+		File path: C:\WINDOWS\SYSTEM32\WINSPOOL.DRV
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: ncrypt.dll
+		Base address: 0x00007ffad35d0000
+		Memory size: 0x00030000
+		Entry point address: 0x00007ffad35d6540
+		File path: C:\WINDOWS\SYSTEM32\ncrypt.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: USP10.dll
+		Base address: 0x00007ffa6f720000
+		Memory size: 0x00019000
+		Entry point address: 0x0000000000000000
+		File path: C:\WINDOWS\SYSTEM32\USP10.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: urlmon.dll
+		Base address: 0x00007ffab4df0000
+		Memory size: 0x001df000
+		Entry point address: 0x00007ffab4e94f20
+		File path: C:\WINDOWS\SYSTEM32\urlmon.dll
+		Product name: Internet Explorer
+		Product version: 11.00.26100.2308
+		Company: Microsoft Corporation
+
+	Name: dxva2.dll
+		Base address: 0x00007ffab5540000
+		Memory size: 0x0002c000
+		Entry point address: 0x00007ffab554c7a0
+		File path: C:\WINDOWS\SYSTEM32\dxva2.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.3624
+		Company: Microsoft Corporation
+
+	Name: wevtapi.dll
+		Base address: 0x00007ffacc2c0000
+		Memory size: 0x00053000
+		Entry point address: 0x00007ffacc2e26a0
+		File path: C:\WINDOWS\SYSTEM32\wevtapi.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: CRYPTUI.dll
+		Base address: 0x00007ffaa0e00000
+		Memory size: 0x0005e000
+		Entry point address: 0x00007ffaa0e01ed0
+		File path: C:\WINDOWS\SYSTEM32\CRYPTUI.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: credui.dll
+		Base address: 0x00007ffa66400000
+		Memory size: 0x0001c000
+		Entry point address: 0x00007ffa664038c0
+		File path: C:\WINDOWS\SYSTEM32\credui.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: OLEACC.dll
+		Base address: 0x00007ffab32b0000
+		Memory size: 0x00078000
+		Entry point address: 0x00007ffab32cfdd0
+		File path: C:\WINDOWS\SYSTEM32\OLEACC.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: dhcpcsvc.DLL
+		Base address: 0x00007ffacc230000
+		Memory size: 0x00023000
+		Entry point address: 0x00007ffacc234a60
+		File path: C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: ESENT.dll
+		Base address: 0x00007ffaacf90000
+		Memory size: 0x00422000
+		Entry point address: 0x00007ffaad0b8e80
+		File path: C:\WINDOWS\SYSTEM32\ESENT.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: iertutil.dll
+		Base address: 0x00007ffab48c0000
+		Memory size: 0x002c4000
+		Entry point address: 0x00007ffab4915dc0
+		File path: C:\WINDOWS\SYSTEM32\iertutil.dll
+		Product name: Internet Explorer
+		Product version: 11.00.26100.2308
+		Company: Microsoft Corporation
+
+	Name: DSROLE.DLL
+		Base address: 0x00007fface900000
+		Memory size: 0x0000b000
+		Entry point address: 0x00007fface901940
+		File path: C:\WINDOWS\SYSTEM32\DSROLE.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: srvcli.dll
+		Base address: 0x00007ffab46d0000
+		Memory size: 0x00029000
+		Entry point address: 0x00007ffab46d3da0
+		File path: C:\WINDOWS\SYSTEM32\srvcli.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: netutils.dll
+		Base address: 0x00007ffad2510000
+		Memory size: 0x0000d000
+		Entry point address: 0x00007ffad2513db0
+		File path: C:\WINDOWS\SYSTEM32\netutils.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: WKSCLI.DLL
+		Base address: 0x00007ffacc1f0000
+		Memory size: 0x0001b000
+		Entry point address: 0x00007ffacc1f3520
+		File path: C:\WINDOWS\SYSTEM32\WKSCLI.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: SAMCLI.DLL
+		Base address: 0x00007ffad24f0000
+		Memory size: 0x0001b000
+		Entry point address: 0x00007ffad24f9870
+		File path: C:\WINDOWS\SYSTEM32\SAMCLI.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: NTASN1.dll
+		Base address: 0x00007ffad3580000
+		Memory size: 0x0003f000
+		Entry point address: 0x00007ffad358cd60
+		File path: C:\WINDOWS\SYSTEM32\NTASN1.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: wdmaud.drv
+		Base address: 0x00007ffa44d30000
+		Memory size: 0x00047000
+		Entry point address: 0x00007ffa44d4f320
+		File path: C:\WINDOWS\SYSTEM32\wdmaud.drv
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: msacm32.drv
+		Base address: 0x00007ffab9400000
+		Memory size: 0x0000f000
+		Entry point address: 0x00007ffab9401400
+		File path: C:\WINDOWS\SYSTEM32\msacm32.drv
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: MSACM32.dll
+		Base address: 0x00007ffa51580000
+		Memory size: 0x00021000
+		Entry point address: 0x00007ffa515894a0
+		File path: C:\WINDOWS\SYSTEM32\MSACM32.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: midimap.dll
+		Base address: 0x00007ffab93f0000
+		Memory size: 0x0000c000
+		Entry point address: 0x00007ffab93f2810
+		File path: C:\WINDOWS\SYSTEM32\midimap.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: FirewallAPI.dll
+		Base address: 0x00007ffad23b0000
+		Memory size: 0x000b1000
+		Entry point address: 0x00007ffad23d7660
+		File path: C:\Windows\System32\FirewallAPI.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: fwbase.dll
+		Base address: 0x00007ffad2320000
+		Memory size: 0x00044000
+		Entry point address: 0x00007ffad2339bb0
+		File path: C:\Windows\System32\fwbase.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: FWPolicyIOMgr.dll
+		Base address: 0x00007ffab5410000
+		Memory size: 0x00061000
+		Entry point address: 0x00007ffab5430b70
+		File path: C:\Windows\System32\FWPolicyIOMgr.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: netprofm.dll
+		Base address: 0x00007fface500000
+		Memory size: 0x0006c000
+		Entry point address: 0x00007fface50edf0
+		File path: C:\WINDOWS\System32\netprofm.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: npmproxy.dll
+		Base address: 0x00007ffac7fd0000
+		Memory size: 0x00019000
+		Entry point address: 0x00007ffac7fd37f0
+		File path: C:\WINDOWS\System32\npmproxy.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1150
+		Company: Microsoft Corporation
+
+	Name: MPCLIENT.DLL
+		Base address: 0x00007ffab7090000
+		Memory size: 0x001b9000
+		Entry point address: 0x00007ffab717e140
+		File path: C:\ProgramData\Microsoft\Windows Defender\Platform\4.18.25070.5-0\MPCLIENT.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 4.18.25070.5
+		Company: Microsoft Corporation
+
+	Name: DiscordHook64.dll
+		Base address: 0x00007ffa18a10000
+		Memory size: 0x003b9000
+		Entry point address: 0x00007ffa18ad03d0
+		File path: C:\Users\amata\AppData\Local\Discord\app-1.0.9208\modules\discord_hook-1\discord_hook\ebb5c86ef75874\DiscordHook64.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: D3DCompiler_47.dll
+		Base address: 0x00007ffacef90000
+		Memory size: 0x0047f000
+		Entry point address: 0x00007ffacf0dbc70
+		File path: C:\WINDOWS\SYSTEM32\D3DCompiler_47.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.6584
+		Company: Microsoft Corporation
+
+	Name: SlimDX.dll
+		Base address: 0x0000000180000000
+		Memory size: 0x00392000
+		Entry point address: 0x00000001801358b4
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\SlimDX.dll
+		Product name: 
+		Product version: 
+		Company: 
+
+	Name: MSVCR100.dll
+		Base address: 0x000000006fdf0000
+		Memory size: 0x000d2000
+		Entry point address: 0x000000006fe114e4
+		File path: C:\WINDOWS\SYSTEM32\MSVCR100.dll
+		Product name: Microsoft® Visual Studio® 2010
+		Product version: 10.00.40219.325
+		Company: Microsoft Corporation
+
+	Name: MSVCP100.dll
+		Base address: 0x000000006fd50000
+		Memory size: 0x00098000
+		Entry point address: 0x000000006fd971d0
+		File path: C:\WINDOWS\SYSTEM32\MSVCP100.dll
+		Product name: Microsoft® Visual Studio® 2010
+		Product version: 10.00.40219.325
+		Company: Microsoft Corporation
+
+	Name: dhcpcsvc6.DLL
+		Base address: 0x00007ffacc290000
+		Memory size: 0x0001e000
+		Entry point address: 0x00007ffacc293c00
+		File path: C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: WindowsCodecsExt.dll
+		Base address: 0x00007ffa3b380000
+		Memory size: 0x00053000
+		Entry point address: 0x00007ffa3b394970
+		File path: C:\WINDOWS\SYSTEM32\WindowsCodecsExt.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: msxml6.dll
+		Base address: 0x00007ffaa2960000
+		Memory size: 0x0023d000
+		Entry point address: 0x00007ffaa29b7d10
+		File path: C:\Windows\System32\msxml6.dll
+		Product name: Microsoft XML Core Services
+		Product version: 6.30.26100.5074
+		Company: Microsoft Corporation
+
+	Name: mfsrcsnk.dll
+		Base address: 0x00007ffa20bd0000
+		Memory size: 0x001cc000
+		Entry point address: 0x00007ffa20c43790
+		File path: C:\WINDOWS\System32\mfsrcsnk.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: CompPkgSup.DLL
+		Base address: 0x00007ffab9cd0000
+		Memory size: 0x00035000
+		Entry point address: 0x00007ffab9cd1bf0
+		File path: C:\WINDOWS\SYSTEM32\CompPkgSup.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+	Name: Windows.Media.dll
+		Base address: 0x00007ffa5cd20000
+		Memory size: 0x00683000
+		Entry point address: 0x00007ffa5ce48860
+		File path: C:\Windows\System32\Windows.Media.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: Windows.ApplicationModel.dll
+		Base address: 0x00007ffaa8300000
+		Memory size: 0x000d7000
+		Entry point address: 0x00007ffaa8342ab0
+		File path: C:\Windows\System32\Windows.ApplicationModel.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: mp3dmod.dll
+		Base address: 0x00007ffa67930000
+		Memory size: 0x00020000
+		Entry point address: 0x00007ffa6793c500
+		File path: C:\Windows\System32\mp3dmod.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4202
+		Company: Microsoft Corporation
+
+	Name: AppXDeploymentClient.dll
+		Base address: 0x00007ffacd9f0000
+		Memory size: 0x00167000
+		Entry point address: 0x00007ffacda279b0
+		File path: C:\Windows\System32\AppXDeploymentClient.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.4768
+		Company: Microsoft Corporation
+
+	Name: ScriptHookVDotNet2.dll
+		Base address: 0x00007ffa255d0000
+		Memory size: 0x00102000
+		Entry point address: 0x00007ffa255ff59a
+		File path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet2.dll
+		Product name: ScriptHookVDotNet
+		Product version: 2.10.13.0
+		Company: 
+
+	Name: ondemandconnroutehelper.dll
+		Base address: 0x00007ffaacb20000
+		Memory size: 0x00018000
+		Entry point address: 0x00007ffaacb25210
+		File path: C:\WINDOWS\SYSTEM32\ondemandconnroutehelper.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1882
+		Company: Microsoft Corporation
+
+	Name: DPAPI.DLL
+		Base address: 0x00007ffad3a30000
+		Memory size: 0x0000a000
+		Entry point address: 0x00007ffad3a319f0
+		File path: C:\WINDOWS\SYSTEM32\DPAPI.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.1
+		Company: Microsoft Corporation
+
+	Name: schannel.DLL
+		Base address: 0x00007ffad2980000
+		Memory size: 0x000c3000
+		Entry point address: 0x00007ffad29e2ea0
+		File path: C:\WINDOWS\system32\schannel.DLL
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.2308
+		Company: Microsoft Corporation
+
+	Name: ncryptsslp.dll
+		Base address: 0x00007ffaa06c0000
+		Memory size: 0x00042000
+		Entry point address: 0x00007ffaa06d2b90
+		File path: C:\WINDOWS\system32\ncryptsslp.dll
+		Product name: Microsoft® Windows® Operating System
+		Product version: 10.0.26100.5074
+		Company: Microsoft Corporation
+
+Environment:
+	TickCount: 11004531
+	ExitCode: 0
+	CommandLine: "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe" -nobattleye -noBE -skipPatcherCheck -steamLocation "C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V" -enableCrashpad -useSteam -steamAppId=271590 -scCommerceProvider=4 @commandline.txt -fromRGL -scDiscordClientId=356876176465199104 -rglLanguage=ja-JP
+	CurrentDirectory: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V
+	SystemDirectory: C:\WINDOWS\system32
+	MachineName: DESKTOP-E38CCUT
+	ProcessorCount: 12
+	SystemPageSize: 4096
+	Version: 4.0.30319.42000
+	WorkingSet: 2889166848
+	OSVersion: Microsoft Windows NT 6.2.9200.0
+	Is64BitProcess: True
+	Is64BitOperatingSystem: True
+	HasShutdownStarted: False
+	UserName: amata
+	UserInteractive: True
+	UserDomainName: DESKTOP-E38CCUT
+	CurrentManagedThreadId: 13
+
+Process list:
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	MSPCManager 3.17.14.0 by MSPCManager (C:\Program Files\WindowsApps\Microsoft.MicrosoftPCManager_3.17.14.0_x64__8wekyb3d8bbwe\PCManager\MSPCManager.exe)
+	Microsoft Gaming Services 10.0.26100.5366 by Microsoft Corporation (C:\WINDOWS\system32\XGameHelper.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\Windows\ImmersiveControlPanel\SystemSettings.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Grand Theft Auto V 1.0.3586.0 by Rockstar Games (C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe)
+	  by  (C:\Program Files\Rockstar Games\Launcher\ThirdParty\Crashpad\RockstarErrorHandler.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Notepad 11.2507.26.0 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.WindowsNotepad_11.2507.26.0_x64__8wekyb3d8bbwe\Notepad\Notepad.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\taskhostw.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	Realtek HD Audio Universal Service 1.0.291.1 by Realtek Semiconductor (C:\Windows\System32\RtkAudUService64.exe)
+	Xbox App 2508.1001.27.0 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.GamingApp_2508.1001.27.0_x64__8wekyb3d8bbwe\XboxGameBarWidgets.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	  by  (C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.272.438.0_x64__zpdnekdrzrea0\XboxGameBarSpotify.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\ShellHost.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Game Bar 7.325.07090.0 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.XboxGamingOverlay_7.325.7090.0_x64__8wekyb3d8bbwe\GameBarFTServer.exe)
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	Microsoft OneDrive 25.159.0817.0003 by Microsoft Corporation (C:\Program Files\Microsoft OneDrive\25.159.0817.0003\FileCoAuth.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	  by  (C:\Program Files\WindowsApps\Microsoft.Edge.GameAssist_1.0.3456.0_x64__8wekyb3d8bbwe\EdgeGameAssist.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	G HUB 2025.6.759533 by Logitech, Inc. (C:\Program Files\LGHUB\system_tray\lghub_system_tray.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\conhost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\Explorer.EXE)
+	MSPCManagerCore 3.17.14.0 by MSPCManagerCore (C:\Program Files\WindowsApps\Microsoft.MicrosoftPCManager_3.17.14.0_x64__8wekyb3d8bbwe\PCManager\MSPCManagerCore.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\WINDOWS\system32\wbem\unsecapp.exe)
+	Microsoft Desktop App Installer 1.26.430.0 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.DesktopAppInstaller_1.26.430.0_x64__8wekyb3d8bbwe\WindowsPackageManagerServer.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\explorer.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\oobe\UserOOBEBroker.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Widgets Platform Runtime 0.5 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.WidgetsPlatformRuntime_1.6.14.0_x64__8wekyb3d8bbwe\WidgetService\WidgetService.exe)
+	  by  (C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\AppActions.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Rockstar Games Launcher 1.0.103.2534 by Rockstar Games (C:\Program Files\Rockstar Games\Launcher\Launcher.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\taskhostw.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1 by Microsoft Corporation (C:\WINDOWS\system32\backgroundTaskHost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\WINDOWS\SystemApps\ShellExperienceHost_cw5n1h2txyewy\ShellExperienceHost.exe)
+	LGHUB Agent 2025.6.759533 by Logitech, Inc. (C:\Program Files\LGHUB\lghub_agent.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft Phone Link 1.25081.83+21dba3d690bc330dc26ec4cbaf315da6bf1a7c43 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.YourPhone_1.25081.83.0_x64__8wekyb3d8bbwe\PhoneExperienceHost.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1 by Microsoft Corporation (C:\WINDOWS\system32\backgroundTaskHost.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\WINDOWS\SystemApps\Microsoft.Windows.StartMenuExperienceHost_cw5n1h2txyewy\StartMenuExperienceHost.exe)
+	Vanguard Tray 1.17.13.23 by Riot Games, Inc. (C:\Program Files\Riot Vanguard\vgtray.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Xbox App 2508.1001.27.0 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.GamingApp_2508.1001.27.0_x64__8wekyb3d8bbwe\XboxPcAppFT.exe)
+	Rockstar Games Launcher Redirector 1.0.0.98 by Rockstar Games (C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\PlayGTAV.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft® Windows® Operating System 2125.21002.10.0 by Microsoft Corporation (C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\SearchHost.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1882 by Microsoft Corporation (C:\Windows\System32\GameBarPresenceWriter.exe)
+	Microsoft Office 16.0.19127.20192 by Microsoft Corporation (C:\Program Files\Microsoft Office\Root\Office16\SDXHelper.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft OneDrive 25.159.0817.0003 by Microsoft Corporation (C:\Program Files\Microsoft OneDrive\OneDrive.exe)
+	Microsoft Defender 1.2.250626002-gibraltar by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.6365217CE6EB4_102.2506.26002.0_x64__8wekyb3d8bbwe\MicrosoftSecurityApp\MicrosoftSecurityApp.exe)
+	Microsoft OneDrive Sync Service 25.159.0817.0003 by Microsoft Corporation (C:\Program Files\Microsoft OneDrive\25.159.0817.0003\OneDrive.Sync.Service.exe)
+	Status Monitor Application 2.0.4.0 by Brother Industries, Ltd. (C:\Program Files (x86)\Browny02\Brother\BrStMonW.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\WINDOWS\system32\sihost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1882 by Microsoft Corporation (C:\Windows\System32\SecurityHealthSystray.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Steam 03.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\gameoverlayui64.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1 by Microsoft Corporation (C:\WINDOWS\system32\BackgroundTaskHost.exe)
+	CrossDeviceService 1.25082.70+cdd414b207aeee60b85529b851e509a197fb69c7 by Microsoft Corporation (C:\Program Files\WindowsApps\MicrosoftWindows.CrossDevice_1.25082.70.0_x64__cw5n1h2txyewy\CrossDeviceService.exe)
+	Java Platform SE Auto Updater 2.8.461.11 by Oracle Corporation (C:\Program Files (x86)\Common Files\Java\Java Update\jusched.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.3912 by Microsoft Corporation (C:\WINDOWS\system32\ApplicationFrameHost.exe)
+	  by  (C:\Program Files\NVIDIA Corporation\NvContainer\nvcontainer.exe)
+	Steam Client WebHelper 01.00.00.01 by Valve Corporation (C:\Program Files (x86)\Steam\bin\cef\cef.win7x64\steamwebhelper.exe)
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	Microsoft® Windows® Operating System 525.22301.40.0 by Microsoft Corporation (C:\Program Files\WindowsApps\MicrosoftWindows.Client.WebExperience_525.22301.90.0_x64__cw5n1h2txyewy\Dashboard\Widgets.exe)
+	Microsoft® Windows® Operating System 2125.21000.0.0 by Microsoft Corporation (C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\TextInputHost.exe)
+	Wondershare NativePush 1.0.1.0 by Wondershare (C:\Users\fzi01\AppData\Local\Wondershare\Wondershare NativePush\WsToastNotification.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\conhost.exe)
+	Steam 01.00.00.02 by Valve Corporation (C:\Program Files (x86)\Steam\Steam.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1 by Microsoft Corporation (C:\WINDOWS\system32\backgroundTaskHost.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\explorer.exe)
+	  by  (C:\Program Files\NVIDIA Corporation\NvContainer\nvcontainer.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	LGHUB Crashpad Handler 0.1.3+635398, Sentry v0.7.6 by Sentry and Logitech, Inc. (C:\Program Files\LGHUB\logi_crashpad_handler.exe)
+	RunCat 365 3.1.0 by Studio Kyome (C:\Program Files\WindowsApps\StudioKyome.RunCat_3.1.0.0_x64__nts6hjhfqpj36\RunCat365\RunCat 365.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft Edge 140.0.3485.66 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\explorer.exe)
+	Microsoft® Windows® Operating System 10.0.26100.4202 by Microsoft Corporation (C:\Windows\System32\smartscreen.exe)
+	Discord 1.0.9208 by Discord Inc. (C:\Users\amata\AppData\Local\Discord\app-1.0.9208\Discord.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Microsoft® Windows® Operating System 10.0.26100.2308 by Microsoft Corporation (C:\WINDOWS\system32\svchost.exe)
+	Microsoft Teams 25227.205.3936.6644 by Microsoft Corporation (C:\Program Files\WindowsApps\MSTeams_25227.205.3936.6644_x64__8wekyb3d8bbwe\ms-teams.exe)
+	Social Club UI 2.4.0.101 by Take-Two Interactive Software, Inc. (C:\Program Files\Rockstar Games\Social Club\SocialClubHelper.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+	Game Bar 7.325.07090.0 by Microsoft Corporation (C:\Program Files\WindowsApps\Microsoft.XboxGamingOverlay_7.325.7090.0_x64__8wekyb3d8bbwe\GameBar.exe)
+	Microsoft® Windows® Operating System 2125.20500.0.0 by Microsoft Corporation (C:\WINDOWS\SystemApps\MicrosoftWindows.Client.CBS_cw5n1h2txyewy\CrossDeviceResume.exe)
+	Microsoft® Windows® Operating System 10.0.26100.1 by Microsoft Corporation (C:\WINDOWS\system32\backgroundTaskHost.exe)
+	  by  (C:\Program Files\WindowsApps\SpotifyAB.SpotifyMusic_1.272.438.0_x64__zpdnekdrzrea0\crashpad_handler.exe)
+	Microsoft® Windows® Operating System 10.0.26100.5074 by Microsoft Corporation (C:\Windows\System32\RuntimeBroker.exe)
+	Microsoft Edge WebView2 140.0.3485.54 by Microsoft Corporation (C:\Program Files (x86)\Microsoft\EdgeWebView\Application\140.0.3485.54\msedgewebview2.exe)
+
+File list: 
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\args.txt *490b3345c667150731ae95eccc958a9f
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\asiloader.log *3d88d3a84567c9420927cd166fd24711
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\bink2w64.dll *32a37cabf00be64d98074eb8be92377c
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\commandline.txt *6b7db9c79d91171a5dee13a08da8cc1c
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\common.rpf *bbe724acef5f9fcfd85a38c4e35e2f00
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\cursor_32_2.png *be981c7e1461188450c1bc0352aee019
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\d3dcompiler_46.dll *7ea872c2f9803cfb4223098b85e70cc0
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\d3dcsx_46.dll *8355e491fa90ca00045be22bb556b213
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\DdsConvert.dll *65e684e0fd64493392436cb92617ceb0
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\DefaultSkin.png *a7562ebd9a7c54a6575808da4680caf3
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\dinput8.dll *c9b973183908a6631b31ca29f863b4d1
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\discord-rpc.dll *5882c37b79bae47a0d090006564edb22
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\DiscordRpcNet.dll *65c8b3ac6205985288c4ee507481cddc
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\EasyHook.dll *163e0d2a3cccaa53f16bf5d41721730e
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\EasyHook64.dll *2d7a7ddd6f7ebf32543d851d9a55f60b
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\EasyLoad64.dll *0ee88c5ca0bcfdf02290f4b87f8b9a7e
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ELS.asi *8a3a156befdec3aaeeaef410880ac8fe
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ELS.ini *a0376719f8ef0e8f346ee6cd12d55dba
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ELS.log *2688e3a59536e299a4b4b3550f0bd947
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\fvad.dll *5c9be6ae5f403391e36b905be8f80d8f
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\FW1FontWrapper.dll *daa32fd4ee493fc1fdf0b66991868ef4
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_ShadowLib.win64.dll *1732f28b6944d9f830f7da0b5f8cc4c3
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_TXAA.win64.dll *6b7e625a91a102ed3e9ebc60d1b8a8ab
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GFSDK_TXAA_AlphaResolve.win64.dll *33ceb6c57a5335773cf0c85f449abc17
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GPUPerfAPIDX11-x64.dll *3f4eb3d3df4549e4fb9436304ad0246f
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5.exe *c8854b420ccca2ae375c376aa6b5e7c8
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTA5_BE.exe *e60b740e8d49ca0129eb8b305ba847ce
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTAVLanguageSelect.exe *6ebe8c7409d9987166dd9ece38d49168
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\GTAVLauncher.exe *6ebe8c7409d9987166dd9ece38d49168
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Gwen.dll *367a1b17121dfc7c2347984380939bc2
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Gwen.UnitTest.dll *90b34cfce1f4caba67f42f4d8f135189
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\HeapAdjuster.asi *7ed737a5cd0488896465688d09d8197c
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\HeapAdjuster.ini *faed60321a9f812bc5fd57f8d94a3954
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\HeapAdjuster.log *12541fb277595127551261b40958357f
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\iFruitAddon2.log *d41d8cd98f00b204e9800998ecf8427e
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\installscript.vdf *34123cd37a06c09b2860f8ebcbbe9d6f
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\installscript_sdk.vdf *ff83e21129082ebf81ca73312afbf9f8
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\libcurl.dll *7335fa44dfc031ed4099c3d2b7ead0b9
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\libtox.dll *c15da99f07a6ebc9f1137ced54d7f0a0
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\License.txt *9f196d9446642fc36a3c8fbf30419ffd
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\LMS.Common.dll *61dfccfc5509df7e88bc4ab7eab982e1
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\LMS.PortableExecutable.dll *6a52fa924073b0f913855f070dc553a7
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\lspdfr_uinst.exe *8e66043791a0f0408c3064916b7cba0d
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Menyoo.asi *4541d0d305e6b8673804980c7300c4ea
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\menyoolog.txt *7a8d9c69dce9e25357e6a9225db8147e
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Microsoft.Expression.Drawing.dll *5bd39a82aacf1aa423e6eeeeda696eea
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll *660103c9ffbd699916d054beeb186bb6
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Mono.Cecil.dll *6d6292bc8e698e53e69556add6f62442
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Mono.Cecil.Mdb.dll *3c6cff9ef0ba7748d6c61dfacb6890a7
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Mono.Cecil.Pdb.dll *c7a0b5173df5bea531a20fbace30fc89
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Mono.Cecil.Rocks.dll *7c9a0c59ce05aba61485eb46883ba933
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\NativeTrainer.asi *e107b94ae23ec9a56bfa1faaf7118e85
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\NvPmApi.Core.win64.dll *058f863ac68bae39ba49deea8a93117e
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\openCameraV.asi *33864c75d1b85563da56aff0ea794267
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\openCameraV.log *c33e527eabf2eea82afc4101ec04b685
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\OpenIV.asi *ef3de847eac7ba336e2d83ba96a8d61d
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\OpenIV.log *fa1e7c6b5d3e28e54cd5d2cf663a9ef6
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\opus.dll *de4d864df6f671bf01e60c8f7a0b897d
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\opusenc.dll *7074a5b7f046cc12b375ddb5b2f35589
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\PackfileLimitAdjuster.asi *afea48689ff49d745affff160157cb15
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\PackfileLimitAdjuster.ini *0ff44d3ac3ef11459d92b9bee1a5491b
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\PlayGTAV.exe *6ebe8c7409d9987166dd9ece38d49168
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\RAGEPluginHook.exe *aa68fc7c65f2e5b2811d3c631e0ea61d
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\RagePluginHook.ini *eec93a3d4330a79493b28ae555adc3da
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\RagePluginHook.log *9c1b25083d4ba0157c208facf0102d13
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\Readme.txt *3b4fef0e20ae30cfdef3897d4620b9af
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\RPH_Readme.txt *7b081efb3e794533b99a7c15807ed09a
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookV.dll *25c118a10ef169728d77fed3bcf4f473
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookV.log *acfe6fa71c4b9b18c9d1e5674e849457
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet.asi *6d5622c1af6c03defd42549705a9a9b6
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet.ini *452aa296f999dc789be6e935ff190fb7
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet.log *08821d9edd5048d58e47f3e4d6b73f22
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet2.dll *b95da0f3864952550c0b9fe1e553f0a8
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet2.xml *6a97e64af486a0c4b37fdd6bc8ee4091
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet3.dll *0f3c34792e230f72521aaf4e56f672ae
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\ScriptHookVDotNet3.xml *ede17656e95babcf33f896582fd7d8b0
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\SlimDX.dll *5c243b42d2b0103bbe603cf586ea8467
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\startup.rphs *d41d8cd98f00b204e9800998ecf8427e
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\steam_api64.dll *cac66a8487a2ef6d3b1b8a66c20d1c12
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\System.ValueTuple.dll *4be8f58e6a00f0130f051f444987d217
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\title.rgl *207fc5d8aea2f6a14c9c910d801cd71f
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\version.txt *eb0ec566293a46f64f522242687722cb
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\versioninfo.txt *ef9faf14cc8b1973a67323dd9e0d59db
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\VStancer.asi *408c6eab6492ec52f30da506857cfba2
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64a.rpf *edfbe6855ec32a21a698abc27a899341
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64b.rpf *70af24cd4fe2c8ee58edb902f018a558
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64c.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64d.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64e.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64f.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64g.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64h.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64i.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64j.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64k.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64l.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64m.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64n.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64o.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64p.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64q.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64r.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64s.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64t.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64u.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64v.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\x64w.rpf *Unknown
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\XCurl.dll *1f1138189afeaff75bbbd8c0a9e3d1c3
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\xinput1_4.dll *d2ef25dff3e2ad78f89a527101767707
+	C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\zlib1.dll *5364af2746216f8d3de2f0418ef45375
+
+Latest log:
+2025/09/14 14:33:41.457] Started new log on 2025/09/14 14:33:41.457
+[2025/09/14 14:33:41.458] ====================================================================================================
+[2025/09/14 14:33:41.455] Log path: C:\Program Files (x86)\Steam\steamapps\common\Grand Theft Auto V\RagePluginHook.log
+[2025/09/14 14:33:41.458] Log verbosity: Trivial
+[2025/09/14 14:33:41.461] Initializing input system
+[2025/09/14 14:33:41.463] AppDomainPool::InitializeAppDomain: Creating new app domain "PreInitializedDomain_0".
+[2025/09/14 14:33:41.463] AppDomainPool::InitializeAppDomain: Creating new app domain "PreInitializedDomain_1".
+[2025/09/14 14:33:41.463] AppDomainPool::InitializeAppDomain: Creating new app domain "PreInitializedDomain_2".
+[2025/09/14 14:33:41.463] AppDomainPool::InitializeAppDomain: Creating new app domain "PreInitializedDomain_3".
+[2025/09/14 14:33:41.464] Initializing game console
+[2025/09/14 14:33:41.469] Console key has been set to F4 (key code: 115)
+[2025/09/14 14:33:41.548] Initializing console variable "ConsoleScrollAmount".
+[2025/09/14 14:33:41.548] Type: System.Int32, Reading section: "Miscellaneous", key: ConsoleScrollAmount
+[2025/09/14 14:33:41.551] Read value: <null>
+[2025/09/14 14:33:41.551] Initializing console variable "ConsoleKey".
+[2025/09/14 14:33:41.551] Type: System.Windows.Forms.Keys, Reading section: "Miscellaneous", key: ConsoleKey
+[2025/09/14 14:33:41.551] Read value: <null>
+[2025/09/14 14:33:41.551] Initializing console variable "PluginTimeoutThreshold".
+[2025/09/14 14:33:41.551] Type: System.Int32, Reading section: "Miscellaneous", key: PluginTimeoutThreshold
+[2025/09/14 14:33:41.556] Read value: 60000
+[2025/09/14 14:33:41.556] Setting value of console variable "PluginTimeoutThreshold" to stored value.
+[2025/09/14 14:33:41.556] Initializing console variable "AlwaysShowConsoleOutput".
+[2025/09/14 14:33:41.556] Type: System.Boolean, Reading section: "Miscellaneous", key: AlwaysShowConsoleOutput
+[2025/09/14 14:33:41.557] Read value: <null>
+[2025/09/14 14:33:41.557] Initializing console variable "ShowConsoleCommandInfoOnPluginLoad".
+[2025/09/14 14:33:41.557] Type: System.Boolean, Reading section: "Miscellaneous", key: ShowConsoleCommandInfoOnPluginLoad
+[2025/09/14 14:33:41.557] Read value: <null>
+[2025/09/14 14:33:41.557] Initializing console variable "ShowOnScreenWarnings".
+[2025/09/14 14:33:41.557] Type: System.Boolean, Reading section: "Miscellaneous", key: ShowOnScreenWarnings
+[2025/09/14 14:33:41.558] Read value: <null>
+[2025/09/14 14:33:41.558] Console initialized
+[2025/09/14 14:33:41.558] Initializing forms manager
+[2025/09/14 14:33:41.559] Cleaning temp folder
+[2025/09/14 14:33:41.561] Version: RAGE Plugin Hook v1.122.1379.17094 for Grand Theft Auto V
+[2025/09/14 14:33:41.579] ================ RAGE Plugin Hook ================
+[2025/09/14 14:33:41.590] Waiting for launcher interop
+[9/14/2025 2:33:41 PM.601] Detected Windows 10 Home (64-bit) (10.0.26100.0)!
+[9/14/2025 2:33:41 PM.603] Checking game support
+[9/14/2025 2:33:41 PM.761] Product name: Grand Theft Auto V
+[9/14/2025 2:33:41 PM.761] Product version: 1.0.3586.0
+[9/14/2025 2:33:41 PM.761] Is steam version: True
+[9/14/2025 2:33:41 PM.761] Is enhanced version: False
+[9/14/2025 2:33:51 PM.764] Initializing DirectX
+[9/14/2025 2:33:51 PM.766] Initializing Direct3D
+[9/14/2025 2:33:51 PM.767] Getting game swap chain
+[9/14/2025 2:33:51 PM.808] Swap Chain created: 0x7FF6E9D181F8
+[9/14/2025 2:33:51 PM.808] Swap Chain VTable: 0x1697DD9B860
+[9/14/2025 2:33:51 PM.808] 0x748948C7E0E269E9;0x8D48564157551824;0x170EC814890246C
+[9/14/2025 2:33:51 PM.808] D3D11Present: 0x7FFAD0E12CA0
+[9/14/2025 2:33:51 PM.808] D3D11ResizeBuffers: 0x7FFAD0E4CCC0
+[9/14/2025 2:33:51 PM.808] D3D11ResizeTarget: 0x7FFAD0E7A040
+[9/14/2025 2:33:51 PM.808] D3D11SetFullscreenState: 0x7FFAD0E4D4C0
+[9/14/2025 2:33:51 PM.808] Getting device
+[9/14/2025 2:33:51 PM.808] Retrieved device
+[9/14/2025 2:33:51 PM.808] Initializing D3D11 Renderer
+[9/14/2025 2:33:51 PM.808] Creating wrapper
+[9/14/2025 2:33:51 PM.809] Direct3D initialized
+[9/14/2025 2:33:51 PM.809] Initialized DirectX
+[9/14/2025 2:33:51 PM.809] Direct3D watcher thread spawned
+[9/14/2025 2:33:51 PM.896] Wrapper created
+[9/14/2025 2:33:51 PM.903] Effect created
+[9/14/2025 2:33:51 PM.903] Creating buffer
+[9/14/2025 2:33:51 PM.903] Created buffer
+[9/14/2025 2:33:51 PM.903] Creating blend state
+[9/14/2025 2:33:51 PM.903] Created blend state
+[9/14/2025 2:33:51 PM.903] Done with creation
+[9/14/2025 2:33:51 PM.980] Initializing texture system.
+[9/14/2025 2:33:51 PM.980] Initializing texture system; phase 1
+[9/14/2025 2:33:51 PM.980] Initializing texture system; phase 2
+[9/14/2025 2:33:51 PM.991] Initializing texture system; phase 3
+[9/14/2025 2:33:51 PM.991] Initializing texture system; phase 4
+[9/14/2025 2:33:52 PM.004] Initializing texture system; phase 5
+[9/14/2025 2:33:52 PM.006] Initializing texture system; phase 6
+[9/14/2025 2:33:52 PM.009] Initializing texture system; phase 7
+[9/14/2025 2:33:52 PM.012] Initializing texture system; phase 8
+[9/14/2025 2:33:52 PM.014] Initializing texture system; phase 9
+[9/14/2025 2:33:52 PM.015] Initializing texture system; phase 10
+[9/14/2025 2:33:52 PM.019] Initializing texture system; phase 11
+[9/14/2025 2:33:52 PM.019] Initializing texture system; phase 12
+[9/14/2025 2:33:52 PM.021] Initializing texture system; phase 13
+[9/14/2025 2:33:52 PM.021] Initializing texture system; phase 14
+[9/14/2025 2:33:52 PM.310] Direct3D watcher thread ended
+[9/14/2025 2:34:18 PM.367] LoadingScreenMsg: Initializing game support
+[9/14/2025 2:34:18 PM.618] Initializing game support
+[9/14/2025 2:34:19 PM.895] LoadingScreenMsg: Velocity limit removed
+[9/14/2025 2:34:20 PM.236] Compatibility level: 0
+[9/14/2025 2:34:20 PM.236] Supported version detected
+[9/14/2025 2:34:20 PM.236] ==================================================
+[9/14/2025 2:34:20 PM.236] LoadingScreenMsg: Patching code
+[9/14/2025 2:34:20 PM.487] LoadingScreenMsg: Waiting for game initialization
+[9/14/2025 2:34:20 PM.737] Waiting for game initialization
+[9/14/2025 2:34:20 PM.838] LoadingScreenMsg: Initializing core
+[9/14/2025 2:34:21 PM.089] Initializing hook
+[9/14/2025 2:34:21 PM.089] LoadingScreenMsg: Completing interoperability
+[9/14/2025 2:34:21 PM.340] Completing interoperability
+[9/14/2025 2:34:21 PM.340] Initialization code 1.
+[9/14/2025 2:34:21 PM.340] Initialization code 2.
+[9/14/2025 2:34:21 PM.340] Initialization code 3.
+[9/14/2025 2:34:21 PM.351] 1 Address: 0x00007FF6E79EB908
+[9/14/2025 2:34:21 PM.351] Calling func 1
+[9/14/2025 2:34:21 PM.373] 2 Address: 0x00007FF6E85FF082
+[9/14/2025 2:34:21 PM.373] 3 Address: 0x00007FF6E6F9605E
+[9/14/2025 2:34:21 PM.409] Address: 0x00007FF6E85FF02C
+[9/14/2025 2:34:21 PM.409] Unknown var: 0x00007FF6E9670750
+[9/14/2025 2:34:21 PM.409] Initialization code 4.
+[9/14/2025 2:34:21 PM.409] Initialization code 5.
+[9/14/2025 2:34:21 PM.409] Completing interoperability, phase 1
+[9/14/2025 2:34:21 PM.409] Completing interoperability, phase 2
+[9/14/2025 2:34:21 PM.410] Highest ID is: 0x0
+[9/14/2025 2:34:21 PM.410] Completing interoperability, phase 3
+[9/14/2025 2:34:21 PM.410] Completing interoperability, phase 4
+[9/14/2025 2:34:21 PM.410] Completing interoperability, phase 5
+[9/14/2025 2:34:21 PM.410] Completing interoperability, phase 6
+[9/14/2025 2:34:21 PM.410] Completing interoperability, phase 7
+[9/14/2025 2:34:21 PM.410] Highest ID after injection is: 0x7fffffff
+[9/14/2025 2:34:21 PM.410] LoadingScreenMsg: 
+[9/14/2025 2:34:21 PM.663] LoadingScreenMsg: Loading Story Mode
+[9/14/2025 2:34:22 PM.692] LoadingScreenMsg: Loading and Populating Game World
+[9/14/2025 2:34:22 PM.943] LoadingScreenMsg: 
+[9/14/2025 2:34:41 PM.573] Initializing console variable "IsDeveloperModeEnabled".
+[9/14/2025 2:34:41 PM.573] Type: System.Boolean, Reading section: "Miscellaneous", key: IsDeveloperModeEnabled
+[9/14/2025 2:34:41 PM.573] Read value: <null>
+[9/14/2025 2:34:41 PM.573] Initializing console variable "TimeScale".
+[9/14/2025 2:34:41 PM.573] Type: System.Single, Reading section: "Miscellaneous", key: TimeScale
+[9/14/2025 2:34:41 PM.574] Read value: <null>
